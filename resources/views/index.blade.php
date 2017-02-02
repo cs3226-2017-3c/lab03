@@ -27,7 +27,7 @@
 						<tr>
 							<td id="hej">1</td>
 							<td class="hidden-xs"><img src="img/CHN.png" width="25px">CHN</td>
-							<td><img src="img/user1.png" height="20px"><img src="img/prof.png" height="15px"><a href="student/1">User 1</a></td>
+							<td><img src="img/user1.png" height="20px"><img src="img/prof.png" height="15px"><a href="students/d-edwards.html">User 1</a></td>
 							<td class="hidden-xs hidden-sm">3</td>
 							<td class="hidden-xs hidden-sm">0</td>
 							<td class="hidden-xs">3</td>
@@ -41,7 +41,7 @@
 						<tr>
 							<td>2</td>
 							<td class="hidden-xs"><img src="img/SGP.png" width="25px">SGP</td>
-							<td><img src="img/user2.png" height="20px"><img src="img/prof.png" height="15px"><a href="student/2">User 2</a></td>
+							<td><img src="img/user2.png" height="20px"><img src="img/prof.png" height="15px"><a href="students/m-alden.html">User 2</a></td>
 							<td class="hidden-xs hidden-sm">3</td>
 							<td class="hidden-xs hidden-sm">0</td>
 							<td class="hidden-xs">3</td>
@@ -55,7 +55,7 @@
 						<tr>
 							<td>3</td>
 							<td class="hidden-xs"><img src="img/IDN.png" width="25px">IDN</td>
-							<td><img src="img/user3.png" height="20px"><img src="img/prof.png" height="15px"><a href="student/3">User 3</a></td>
+							<td><img src="img/user3.png" height="20px"><img src="img/prof.png" height="15px"><a href="students/h-caulfield.html">User 3</a></td>
 							<td class="hidden-xs hidden-sm">4</td>
 							<td class="hidden-xs hidden-sm">0</td>
 							<td class="hidden-xs">4</td>

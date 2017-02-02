@@ -15,13 +15,13 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto+Slab" rel="stylesheet">
   </head>
   <body>
-    
+  <div class="container">  
 	@include('_navigation')
 	
 	@yield('main')
 	
 	@include('_footer')
 
-
+  </div>
   </body>
 </html>

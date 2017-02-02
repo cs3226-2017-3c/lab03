@@ -52,3 +52,11 @@ td {
 td img {
     margin-right: 3px
 }
+
+.rank {
+    width:10px;
+}
+
+.flag {
+    width:70px;
+}

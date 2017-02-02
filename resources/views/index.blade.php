@@ -9,8 +9,8 @@
 					<table id="test" class="table table-condensed table-hover tablesorter">
 					<thead>
 						<tr>
-							<th>R</th>
-							<th class="hidden-xs" onclick= "setAllSameHeight()">Flag</th>
+							<th class="rank">R</th>
+							<th class="hidden-xs flag" onclick= "setAllSameHeight()">Flag</th>
 							<th onclick= "setAllSameHeight()">Name</th>
 							<th class="hidden-xs hidden-sm" onclick= "setAllSameHeight()">MC</th>
 							<th class="hidden-xs hidden-sm" onclick= "setAllSameHeight()">TC</th>

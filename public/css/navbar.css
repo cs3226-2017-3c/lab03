@@ -1,0 +1,50 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.gold {
+    background-color: gold;
+}
+
+.silver {
+    background-color: silver;
+}
+
+.bronze {
+    background-color: #cd7f32;
+}
+
+span.cyan {
+    color: cyan;
+}
+.empty { 
+    background-color: pink; 
+}
+
+.highlighted { 
+    background-color: orange; 
+}
+
+#flag {
+    margin-right: 60px;
+    border: 1px solid;
+}
+
+#photo {
+    border: 1px solid;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Slab', serif;
+}
+
+
+td {
+    vertical-align: bottom !important;
+}

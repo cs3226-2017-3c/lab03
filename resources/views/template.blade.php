@@ -16,11 +16,11 @@
   </head>
   <body>
     
-	@include('layouts._navigation')
+	@include('_navigation')
 	
 	@yield('main')
 	
-	@include('layouts._footer')
+	@include('_footer')
 
 
   </body>

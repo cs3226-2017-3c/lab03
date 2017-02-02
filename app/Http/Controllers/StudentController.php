@@ -13,8 +13,9 @@ class StudentController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function showProfile($id)
+    public function showId($id)
     {
-        return view('user.profile', ['user' => User::findOrFail($id)]);
+		$data['id'] = $id;
+        return View::make('simple', $data);
     }
 }

@@ -79,11 +79,8 @@
               <li>****** <strong>Kattis apprentice</strong>: Be in top 25 (6%)/50 (5%)/100 (4%)/150 (3%)/200 (2%)/250 (1%) of <a href="https://open.kattis.com/ranklist">Kattis ranklist</a> <u>by the end of Week13</u> (this achievement will NOT be updated weekly as this will keep changing every week).</li>
               <li>* <strong>CodeForces Specialist</strong>: Given to student who also join <a href="http://codeforces.com/">CodeForces</a> contests and attain rating of at least <span class="cyan">1400 (Cyan color)</span> <u>by the end of Week13</u> (this achievement will NOT be updated weekly as this will keep changing every week).</li>
             </ol>
-            <footer>
-              <p class="text-center">© CS3233</p>
-            </footer>
           </div>
         </div>
       </div>
-    </div> <!-- /container -->
+     <!-- /container -->
 @stop

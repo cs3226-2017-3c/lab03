@@ -6,7 +6,7 @@
 	    <div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
-					<table id="test" class="table table-condensed table-hover tablesorter">
+					<table id="myTable" class="table table-condensed table-hover tablesorter">
 					<thead>
 						<tr>
 							<th class="rank">R</th>

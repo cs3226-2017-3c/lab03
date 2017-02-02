@@ -1,7 +1,7 @@
 @extends('template')
-@yield('title')
+@section('title')
 Help
-@stop
+@endsection
 @section('main')
       <!-- Main component for a primary marketing message or call to action -->
       <div class="container-fluid">
@@ -86,4 +86,4 @@ Help
         </div>
       </div>
      <!-- /container -->
-@stop
+@endsection

@@ -21,7 +21,7 @@
 	@yield('main')
 	
 	@include('_footer')
-
+    <script type="text/javascript" src="js/highlight.js"></script>
   </div>
   </body>
 </html>

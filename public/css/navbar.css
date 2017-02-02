@@ -48,3 +48,7 @@ h1, h2, h3 {
 td {
     vertical-align: bottom !important;
 }
+
+td img {
+    margin-right: 3px
+}

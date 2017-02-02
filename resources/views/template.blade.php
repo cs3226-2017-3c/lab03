@@ -12,7 +12,7 @@
 
     <!-- Custom styles for this template -->
     <link href="/css/navbar.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans%7cRoboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans%7cRaleway" rel="stylesheet">
   </head>
   <body>
   <div class="container">  

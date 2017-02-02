@@ -10,16 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*
 Route::get('/', 'StudentController@index');
-Route::get('student/{id}', 'StudentController@showProfile');
-Route::get('student/{id}','StudentController@detail');
-*/
-Route::get('/', function(){ return view('index'); });
-
-Route::get('help', function(){ return View::make('help'); });
-/*
-Route::get('/', function () {
-    return view('welcome');
-});
-*/
+Route::get('student/{id}', 'StudentController@detail');
+Route::get('help', function() { return view('help'); }); // direct controller

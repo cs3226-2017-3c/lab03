@@ -13,9 +13,11 @@ class StudentController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function showId($id)
-    {
-		$data['id'] = $id;
-        return View::make('simple', $data);
+    public function index() { 
+        return view('index'); 
+    } 
+
+    public function detail($id) {
+        return view('detail',['id' => $id])
     }
 }

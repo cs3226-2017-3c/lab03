@@ -128,3 +128,6 @@
 			</div>
 		</div>
 @endsection
+@section('footer')
+    <script type="text/javascript" src="js/highlight.js"></script>
+@endsection

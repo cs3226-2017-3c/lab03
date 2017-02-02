@@ -1,4 +1,7 @@
 @extends('template') <!-- use template from previous slide -->
+@yield('title')
+    Home
+@stop
 @section('main') <!-- define a section called main -->
 	    <div class="container-fluid">
 			<div class="row">

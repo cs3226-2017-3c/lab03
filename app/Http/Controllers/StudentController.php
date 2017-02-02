@@ -18,6 +18,6 @@ class StudentController extends Controller
     } 
 
     public function detail($id) {
-        return view('detail',['id' => $id])
+        return view('detail',['id' => $id]);
     }
 }

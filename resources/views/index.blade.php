@@ -1,7 +1,7 @@
 @extends('template') <!-- use template from previous slide -->
-@yield('title')
+@section('title')
     Home
-@stop
+@endsection
 @section('main') <!-- define a section called main -->
 	    <div class="container-fluid">
 			<div class="row">
@@ -127,4 +127,4 @@
 				</div>
 			</div>
 		</div>
-@stop
+@endsection

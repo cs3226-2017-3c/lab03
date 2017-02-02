@@ -1,7 +1,7 @@
 @extends('template')
-@yield('title')
+@section('title')
     Student {{ $id }}
-@stop
+@endsection
 @section('main')
     <div class="container-fluid">
         <div class="row">
@@ -10,4 +10,4 @@
             </div>
         </div>
     </div>
-@stop
+@endsection

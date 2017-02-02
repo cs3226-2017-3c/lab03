@@ -18,7 +18,7 @@ Route::get('student/{id}','StudentController@detail');
 
 Route::get('help', function(){ return view('help'); });
 
-Route::get('/'. function(){ return view('index'); });
+Route::get('/', function(){ return view('index'); });
 /*
 Route::get('/', function () {
     return view('welcome');

@@ -7,7 +7,7 @@ $(document).ready(function()
 
 $(document).ready(function () {
     var cols = []
-    var trs = $('#test tr')
+    var trs = $('#myTable tr')
     var data =$.each(trs , function(index, tr){
         $.each($(tr).find("td").not(":first"), function(index, td){
             cols[index] = cols[index] || [];
@@ -19,7 +19,7 @@ $(document).ready(function () {
     cols.forEach(function(col, index){
         var max = Math.max.apply(null, col);
         var min = Math.min.apply(null, col)
-        $('#test tr').find('td:nth-child(12)').each(function(i, td){
+        $('#myTable tr').find('td:nth-child(12)').each(function(i, td){
             if($(td).text() == max){
                 $(this).parent("tr").css("background-color", "gold")
             }
@@ -31,7 +31,7 @@ $(document).ready(function () {
     //highlight highest value
     cols.forEach(function(col, index){
         var max = Math.max.apply(null, col);
-        $('#test tr').find('td:eq('+(index+1)+')').each(function(i, td){
+        $('#myTable tr').find('td:eq('+(index+1)+')').each(function(i, td){
             $(this).toggleClass('highlighted', +$(td).text() == max)
         })
     })
@@ -43,7 +43,7 @@ $(document).ready(function () {
         
         var tcol = scol.filter(function(x){return x != smax});
         var tmax = Math.max.apply(null, tcol);
-        $('#test tr').find('td:nth-child(12)').each(function(i, td){
+        $('#myTable tr').find('td:nth-child(12)').each(function(i, td){
             if($(td).text() == smax){
                 $(this).parent("tr").css("background-color", "silver")
             }
@@ -52,21 +52,10 @@ $(document).ready(function () {
             }
         })
     })
-}); 
 
+    //Setting row height according to difference between SUMs
 
-function setAllSameHeight()
-{
-    tablerows = document.getElementById("test").rows;
-    for(i=0;i<tablerows.length;i++){
-        tablerows[i].style.height = "30px"; 
-    }
-    
-}
-//Setting row height according to difference between SUMs
-$(document).ready(function () {
-
-    var t = document.getElementById("test");
+    var t = document.getElementById("myTable");
 
     for(var i=2; i < t.rows.length; i++) {
         var sumi = t.rows[i].cells[11].innerHTML;
@@ -74,4 +63,14 @@ $(document).ready(function () {
         t.rows[i].style.height = 30+50*(Math.abs(sumi-sumiminus1)).toString()+"px";
 
     }
-});
+}); 
+
+
+function setAllSameHeight()
+{
+    tablerows = document.getElementById("myTable").rows;
+    for(i=0;i<tablerows.length;i++){
+        tablerows[i].style.height = "30px"; 
+    }
+    
+}

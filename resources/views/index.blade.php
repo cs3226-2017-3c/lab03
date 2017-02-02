@@ -26,8 +26,8 @@
 					<tbody>
 						<tr>
 							<td id="hej">1</td>
-							<td class="hidden-xs"><img src="img/CHN.png" width="25px">CHN</td>
-							<td><img src="img/user1.png" height="20px"><img src="img/prof.png" height="15px"><a href="student/1">User 1</a></td>
+							<td class="hidden-xs"><img alt="" src="img/CHN.png" width="25px">CHN</td>
+							<td><img alt="" src="img/user1.png" height="20"><img alt="" src="img/prof.png" height="15px"><a href="student/1">User 1</a></td>
 							<td class="hidden-xs hidden-sm">3</td>
 							<td class="hidden-xs hidden-sm">0</td>
 							<td class="hidden-xs">3</td>
@@ -40,8 +40,8 @@
 						</tr>
 						<tr>
 							<td>2</td>
-							<td class="hidden-xs"><img src="img/SGP.png" width="25px">SGP</td>
-							<td><img src="img/user2.png" height="20px"><img src="img/prof.png" height="15px"><a href="student/2">User 2</a></td>
+							<td class="hidden-xs"><img alt="" src="img/SGP.png" width="25px">SGP</td>
+							<td><img alt="" src="img/user2.png" height="20"><img alt="" src="img/prof.png" height="15px"><a href="student/2">User 2</a></td>
 							<td class="hidden-xs hidden-sm">3</td>
 							<td class="hidden-xs hidden-sm">0</td>
 							<td class="hidden-xs">3</td>
@@ -54,8 +54,8 @@
 						</tr>
 						<tr>
 							<td>3</td>
-							<td class="hidden-xs"><img src="img/IDN.png" width="25px">IDN</td>
-							<td><img src="img/user3.png" height="20px"><img src="img/prof.png" height="15px"><a href="student/3">User 3</a></td>
+							<td class="hidden-xs"><img alt="" src="img/IDN.png" width="25px">IDN</td>
+							<td><img alt="" src="img/user3.png" height="20"><img alt="" src="img/prof.png" height="15px"><a href="student/3">User 3</a></td>
 							<td class="hidden-xs hidden-sm">4</td>
 							<td class="hidden-xs hidden-sm">0</td>
 							<td class="hidden-xs">4</td>
@@ -68,8 +68,8 @@
 						</tr>
 						<tr>
 							<td>4</td>
-							<td class="hidden-xs"><img src="img/VNM.png" width="25px">VNM</td>
-							<td><img src="img/user4.png" height="20px"><img src="img/prof.png" height="15px">User 4</td>
+							<td class="hidden-xs"><img alt="" src="img/VNM.png" width="25px">VNM</td>
+							<td><img alt="" src="img/user4.png" height="20"><img alt="" src="img/prof.png" height="15px">User 4</td>
 							<td class="hidden-xs hidden-sm">4</td>
 							<td class="hidden-xs hidden-sm">0</td>
 							<td class="hidden-xs">4</td>
@@ -82,8 +82,8 @@
 						</tr>
 						<tr>
 							<td>5</td>
-							<td class="hidden-xs"><img src="img/MYS.png" width="25px">MYS</td>
-							<td><img src="img/user5.png" height="20px"><img src="img/prof.png" height="15px">User 5</td>
+							<td class="hidden-xs"><img alt="" src="img/MYS.png" width="25px">MYS</td>
+							<td><img alt="" src="img/user5.png" height="20"><img alt="" src="img/prof.png" height="15px">User 5</td>
 							<td class="hidden-xs hidden-sm">3.5</td>
 							<td class="hidden-xs hidden-sm">0</td>
 							<td class="hidden-xs">3.5</td>
@@ -96,8 +96,8 @@
 						</tr>
 						<tr>
 							<td>6</td>
-							<td class="hidden-xs"><img src="img/CHN.png" width="25px">CHN</td>
-							<td><img src="img/user6.png" height="20px"><img src="img/prof.png" height="15px">User 6</td>
+							<td class="hidden-xs"><img alt="" src="img/CHN.png" width="25px">CHN</td>
+							<td><img alt="" src="img/user6.png" height="20"><img alt="" src="img/prof.png" height="15px">User 6</td>
 							<td class="hidden-xs hidden-sm">1</td>
 							<td class="hidden-xs hidden-sm">0</td>
 							<td class="hidden-xs">1</td>
@@ -110,8 +110,8 @@
 						</tr>
 						<tr>
 							<td>7</td>
-							<td class="hidden-xs"><img src="img/CHN.png" width="25px">CHN</td>
-							<td><img src="img/user7.png" height="20px"><img src="img/prof.png" height="15px">User 7</td>
+							<td class="hidden-xs"><img alt="" src="img/CHN.png" width="25px">CHN</td>
+							<td><img alt="" src="img/user7.png" height="20"><img alt="" src="img/prof.png" height="15px">User 7</td>
 							<td class="hidden-xs hidden-sm">1</td>
 							<td class="hidden-xs hidden-sm">0</td>
 							<td class="hidden-xs">1</td>

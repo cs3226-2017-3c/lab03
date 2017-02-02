@@ -52,15 +52,6 @@ $(document).ready(function () {
             }
         })
     })
-
-    var t = document.getElementById("test");
-
-    for(var i=2; i < t.rows.length; i++) {
-        var sumi = t.rows[i].cells[11].innerHTML;
-        var sumiminus1 = t.rows[i-1].cells[11].innerHTML;
-        t.rows[i].style.height = 30+50*(Math.abs(sumi-sumiminus1)).toString()+"px";
-
-    }
 }); 
 
 
@@ -73,4 +64,14 @@ function setAllSameHeight()
     
 }
 //Setting row height according to difference between SUMs
+$(document).ready(function () {
 
+    var t = document.getElementById("test");
+
+    for(var i=2; i < t.rows.length; i++) {
+        var sumi = t.rows[i].cells[11].innerHTML;
+        var sumiminus1 = t.rows[i-1].cells[11].innerHTML;
+        t.rows[i].style.height = 30+50*(Math.abs(sumi-sumiminus1)).toString()+"px";
+
+    }
+});

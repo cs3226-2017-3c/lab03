@@ -7,8 +7,7 @@
         <div class="row">
           <div class="col-md-6 col-xs-12" >
             <header>
-              <h3><strong>Delano Edwards</strong> in CS3233 S1 AY 2020/21</h3>
-              <p><a href="#">Kattis account <img src="../img/kattis.png" alt="Kattis" width="20" height="15"></a></p>
+              <h3><strong>{{ $name }}</strong> <a href="#"><img src="../img/kattis.png" alt="Kattis" width="20" height="15"></a> in CS3233 S1 AY 2020/21</h3>
               <p><strong>SPE</strong>(ed) component: <strong>{{ $mc }} + {{ $tc }} = {{ $spe }}</strong><br>
               <strong>DIL</strong>(igence) component: <strong>{{ $hw }} + {{ $bs }} + {{ $ks }} + {{ $ac }} = {{ $dil }}</strong><br>
               <strong>Sum = SPE + DIL = {{ $spe }} + {{ $dil }} = {{ $sum }}</strong></p>

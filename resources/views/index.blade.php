@@ -24,104 +24,22 @@
 						</tr>
 					</thead>
 					<tbody>
+					@foreach($student as $s)
 						<tr>
-							<td id="hej">1</td>
+							<td>{{$s->id}}</td>
 							<td class="hidden-xs"><img alt="" src="img/CHN.png" width="25">CHN</td>
-							<td><img alt="" src="img/user1.png" height="20"><img alt="" src="img/prof.png" height="15"><a href="student/1">User 1</a></td>
-							<td class="hidden-xs hidden-sm">3</td>
-							<td class="hidden-xs hidden-sm">0</td>
-							<td class="hidden-xs">3</td>
-							<td class="hidden-xs hidden-sm">1.5</td>
-							<td class="hidden-xs hidden-sm">1</td>
-							<td class="hidden-xs hidden-sm">2</td>
-							<td class="hidden-xs hidden-sm">4</td>
-							<td class="hidden-xs">8.5</td>
-							<td>11.5</td>
+							<td><img alt="" src="img/user1.png" height="20"><img alt="" src="img/prof.png" height="15"><a href="student/1">{{$s->name}}</a></td>
+							<td class="hidden-xs hidden-sm">{{$s->mc}}</td>
+							<td class="hidden-xs hidden-sm">{{$s->tc}}</td>
+							<td class="hidden-xs">{{$s->mc+$s->tc}}</td>
+							<td class="hidden-xs hidden-sm">{{$s->hw}}</td>
+							<td class="hidden-xs hidden-sm">{{$s->bs}}</td>
+							<td class="hidden-xs hidden-sm">{{$s->ks}}</td>
+							<td class="hidden-xs hidden-sm">{{$s->ac}}</td>
+							<td class="hidden-xs">{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
+							<td>{{$s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac}}</td>
 						</tr>
-						<tr>
-							<td>2</td>
-							<td class="hidden-xs"><img alt="" src="img/SGP.png" width="25">SGP</td>
-							<td><img alt="" src="img/user2.png" height="20"><img alt="" src="img/prof.png" height="15"><a href="student/2">User 2</a></td>
-							<td class="hidden-xs hidden-sm">3</td>
-							<td class="hidden-xs hidden-sm">0</td>
-							<td class="hidden-xs">3</td>
-							<td class="hidden-xs hidden-sm">1</td>
-							<td class="hidden-xs hidden-sm">1</td>
-							<td class="hidden-xs hidden-sm">2</td>
-							<td class="hidden-xs hidden-sm">4</td>
-							<td class="hidden-xs">8</td>
-							<td>11</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td class="hidden-xs"><img alt="" src="img/IDN.png" width="25">IDN</td>
-							<td><img alt="" src="img/user3.png" height="20"><img alt="" src="img/prof.png" height="15"><a href="student/3">User 3</a></td>
-							<td class="hidden-xs hidden-sm">4</td>
-							<td class="hidden-xs hidden-sm">0</td>
-							<td class="hidden-xs">4</td>
-							<td class="hidden-xs hidden-sm">1</td>
-							<td class="hidden-xs hidden-sm">1</td>
-							<td class="hidden-xs hidden-sm">1</td>
-							<td class="hidden-xs hidden-sm">4</td>
-							<td class="hidden-xs">7</td>
-							<td>11</td>
-						</tr>
-						<tr>
-							<td>4</td>
-							<td class="hidden-xs"><img alt="" src="img/VNM.png" width="25">VNM</td>
-							<td><img alt="" src="img/user4.png" height="20"><img alt="" src="img/prof.png" height="15">User 4</td>
-							<td class="hidden-xs hidden-sm">4</td>
-							<td class="hidden-xs hidden-sm">0</td>
-							<td class="hidden-xs">4</td>
-							<td class="hidden-xs hidden-sm">1</td>
-							<td class="hidden-xs hidden-sm">1</td>
-							<td class="hidden-xs hidden-sm">1</td>
-							<td class="hidden-xs hidden-sm">3</td>
-							<td class="hidden-xs">6</td>
-							<td>10</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td class="hidden-xs"><img alt="" src="img/MYS.png" width="25">MYS</td>
-							<td><img alt="" src="img/user5.png" height="20"><img alt="" src="img/prof.png" height="15">User 5</td>
-							<td class="hidden-xs hidden-sm">3.5</td>
-							<td class="hidden-xs hidden-sm">0</td>
-							<td class="hidden-xs">3.5</td>
-							<td class="hidden-xs hidden-sm">1.5</td>
-							<td class="hidden-xs hidden-sm">1</td>
-							<td class="hidden-xs hidden-sm">2</td>
-							<td class="hidden-xs hidden-sm">2</td>
-							<td class="hidden-xs">6.5</td>
-							<td>10</td>
-						</tr>
-						<tr>
-							<td>6</td>
-							<td class="hidden-xs"><img alt="" src="img/CHN.png" width="25">CHN</td>
-							<td><img alt="" src="img/user6.png" height="20"><img alt="" src="img/prof.png" height="15">User 6</td>
-							<td class="hidden-xs hidden-sm">1</td>
-							<td class="hidden-xs hidden-sm">0</td>
-							<td class="hidden-xs">1</td>
-							<td class="hidden-xs hidden-sm">1.5</td>
-							<td class="hidden-xs hidden-sm">1</td>
-							<td class="hidden-xs hidden-sm">2</td>
-							<td class="hidden-xs hidden-sm">4</td>
-							<td class="hidden-xs">8.5</td>
-							<td>9.5</td>
-						</tr>
-						<tr>
-							<td>7</td>
-							<td class="hidden-xs"><img alt="" src="img/CHN.png" width="25">CHN</td>
-							<td><img alt="" src="img/user7.png" height="20"><img alt="" src="img/prof.png" height="15">User 7</td>
-							<td class="hidden-xs hidden-sm">1</td>
-							<td class="hidden-xs hidden-sm">0</td>
-							<td class="hidden-xs">1</td>
-							<td class="hidden-xs hidden-sm">1.5</td>
-							<td class="hidden-xs hidden-sm">1</td>
-							<td class="hidden-xs hidden-sm">1</td>
-							<td class="hidden-xs hidden-sm">4</td>
-							<td class="hidden-xs">7.5</td>
-							<td>8.5</td>
-						</tr>
+					@endforeach
 					</tbody>
 					</table>
 				</div>

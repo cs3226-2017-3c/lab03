@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
 use App\Http\Controllers\Controller;
+use Faker\Factory;
 
 class StudentController extends Controller
 {
@@ -18,8 +18,6 @@ class StudentController extends Controller
     } 
 
     public function detail($id) {
-        require_once '/var/www/html/cs3226/vendor/autoload.php';
-
 
         $faker = Faker\Factory::create();
 

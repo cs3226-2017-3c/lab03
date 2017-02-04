@@ -13,7 +13,17 @@ class Student extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('student', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('mc');
+            $table->string('tc');
+            $table->string('hw');
+            $table->string('bs');
+            $table->string('ks');
+            $table->string('ac');            
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +33,6 @@ class Student extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('student');
     }
 }

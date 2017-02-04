@@ -24,9 +24,9 @@
 						</tr>
 					</thead>
 					<tbody>
-					@foreach($student as $s)
+					@foreach($student as $index=>$s)
 						<tr>
-							<td>{{$s->id}}</td>
+							<td>{{$index+1}}</td>
 							<td class="hidden-xs"><img alt="" src="img/CHN.png" width="25">CHN</td>
 							<td><img alt="" src="img/prof.png" height="15"><a href="student/{{$s->id}}">{{$s->name}}</a></td>
 							<td class="hidden-xs hidden-sm">{{$s->mc}}</td>

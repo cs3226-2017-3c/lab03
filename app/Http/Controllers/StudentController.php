@@ -1,4 +1,5 @@
 <?php
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller as Controller;
 use Faker\Factory as Faker;

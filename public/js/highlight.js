@@ -14,7 +14,8 @@ $(document).ready(function () {
             cols[index].push($(td).text())
         })
     });
-    //color code rank group
+
+    /*
     //Class gold and pink
     cols.forEach(function(col, index){
         var max = Math.max.apply(null, col);
@@ -26,13 +27,6 @@ $(document).ready(function () {
             if($(td).text() == min){
                 $(this).parent("tr").css("background-color", "pink")
             }
-        })
-    })
-    //highlight highest value
-    cols.forEach(function(col, index){
-        var max = Math.max.apply(null, col);
-        $('#myTable tr').find('td:eq('+(index+1)+')').each(function(i, td){
-            $(this).toggleClass('highlighted', +$(td).text() == max)
         })
     })
     //Class silver and brown
@@ -50,6 +44,14 @@ $(document).ready(function () {
             if($(td).text() == tmax){
                 $(this).parent("tr").css("background-color", "#cd7f32")
             }
+        })
+    })
+    */
+    //highlight highest value
+    cols.forEach(function(col, index){
+        var max = Math.max.apply(null, col);
+        $('#myTable tr').find('td:eq('+(index+1)+')').each(function(i, td){
+            $(this).toggleClass('highlighted', +$(td).text() == max)
         })
     })
 

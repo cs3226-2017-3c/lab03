@@ -1,8 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller as Controller;
-use Faker\Factory as Faker;
+use App\Http\Controllers\Controller;
+use Faker\Factory;
 
 class StudentController extends Controller
 {
@@ -18,7 +18,7 @@ class StudentController extends Controller
 
     public function detail($id) {
 
-        $faker = Faker::create();
+        $faker = Faker\Factory::create();
 
         $limit = 50;
 

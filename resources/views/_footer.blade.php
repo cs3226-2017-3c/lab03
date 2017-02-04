@@ -1,5 +1,5 @@
 	<footer class="site-footer">
-		<p class="text-center">© CS3233</p>
+		<p class="text-center">© C.G. Lim, Z. Lin & S.F. Zarrinkoub, CS3233 Group 3-4. <a href="https://github.com/cs3226jan2017-l3-4"><img alt="GitHub" src="/img/GitHub-Mark-32px.png"></a></p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

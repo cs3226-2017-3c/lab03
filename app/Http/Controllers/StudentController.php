@@ -13,23 +13,16 @@ class StudentController extends Controller
      * @return Response
      */
     public function index() { 
-        $student = DB::table('student')->get();
-        return view('index', ['student' => $student]); 
+        $students = DB::table('student')->get();
+        usort($students, function($a, $b)
+        {
+            return $a->mc+$a->tc+$a->hw+$a->bs+$a->ks+$a->ac < $b->mc+$b->tc+$b->hw+$b->bs+$b->ks+$b->ac;
+        });
+        return view('index', ['student' => $students]); 
     } 
 
     public function detail($id) {
         $student = DB::table('student')->where('id', $id)->first();
-
-        $mc = $student->mc;
-        $tc = $student->tc;
-        $hw = $student->hw;
-        $bs = $student->bs;
-        $ks = $student->ks;
-        $ac = $student->ac;
-        $spe= $mc + $tc;
-        $dil= $hw + $bs + $ks + $ac;
-        $sum= $spe + $dil;
-
-        return view('detail',['id' => $student->id,'name' => $student->name, 'mc' => $mc,'tc' => $tc,'hw' => $hw,'bs' => $bs,'ks' => $ks,'ac' => $ac, 'spe'=> $spe, 'dil'=>$dil, 'sum'=>$sum]);
+        return view('detail',['student' => $student]);
     }
 }

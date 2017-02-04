@@ -1,12 +1,10 @@
 $(document).ready(function() 
 { 
-    $("#myTable").tablesorter(headers: {
-      11: { sortInitialOrder: 'desc' }
-    }); 
+    $("#myTable").tablesorter(); 
 } 
 ); 
 
-/*
+
 $(document).ready(function () {
     var cols = []
     var trs = $('#myTable tr')
@@ -66,7 +64,7 @@ $(document).ready(function () {
 
     }
 }); 
-*/
+
 
 function setAllSameHeight()
 {

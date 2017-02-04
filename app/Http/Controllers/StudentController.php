@@ -22,7 +22,7 @@ class StudentController extends Controller
 
         $limit = 50;
 
-        $detail = array()
+        $detail = array();
 
         for ($i = 0; $i < $limit; $i++) {
             $score = array();
@@ -30,18 +30,18 @@ class StudentController extends Controller
               $score []= $faker->randomDigit;
             }
 
-            $detail[(string)($i+1)]= array("name"=>$faker->unique()->name, "score"=>$score );
+            $detail[(string)($i+1)]= array("name"=>$faker->unique()->name, "score"=>$score);
         }
-        
-        $mc = $detail[$id]['score'][0]
-        $tc = $detail[$id]['score'][1]
-        $hw = $detail[$id]['score'][2]
-        $bs = $detail[$id]['score'][3]
-        $ks = $detail[$id]['score'][4]
-        $ac = $detail[$id]['score'][5]
-        $spe = $mc + $tc
-        $dil = $hw + $bs + $ks + $ac
-        $sum = $spe + $dil
+
+        $mc = $detail[$id]['score'][0];
+        $tc = $detail[$id]['score'][1];
+        $hw = $detail[$id]['score'][2];
+        $bs = $detail[$id]['score'][3];
+        $ks = $detail[$id]['score'][4];
+        $ac = $detail[$id]['score'][5];
+        $spe = $mc + $tc;
+        $dil = $hw + $bs + $ks + $ac;
+        $sum = $spe + $dil;
 
         return view('detail',['name' => $detail[$id]['name'], 'mc' => $mc,'tc' => $tc,'hw' => $hw,'bs' => $bs,'ks' => $ks,'ac' => $ac,'spe' => $spe,'dil' => $dil, 'sum' => $sum]);
     }

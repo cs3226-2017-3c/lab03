@@ -1,10 +1,10 @@
 $(document).ready(function() 
 { 
-    $("#myTable").tablesorter( {sortList: [11,1]} ); 
+    $("#myTable").tablesorter([11,1]); 
 } 
 ); 
 
-
+/*
 $(document).ready(function () {
     var cols = []
     var trs = $('#myTable tr')
@@ -64,7 +64,7 @@ $(document).ready(function () {
 
     }
 }); 
-
+*/
 
 function setAllSameHeight()
 {

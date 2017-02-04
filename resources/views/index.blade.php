@@ -26,7 +26,7 @@
 					<tbody>
 					@foreach($student as $s)
 						<tr>
-							<td id="haj">{{$s->id}}</td>
+							<td>{{$s->id}}</td>
 							<td class="hidden-xs"><img alt="" src="img/CHN.png" width="25">CHN</td>
 							<td><img alt="" src="img/prof.png" height="15"><a href="student/{{$s->id}}">{{$s->name}}</a></td>
 							<td class="hidden-xs hidden-sm">{{$s->mc}}</td>

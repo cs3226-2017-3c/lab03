@@ -49,7 +49,7 @@ td {
     vertical-align: bottom !important;
 }
 
-td img {
+td img, td span {
     margin-right: 3px
 }
 

@@ -17,7 +17,7 @@ class StudentController extends Controller
     } 
 
     public function detail($id) {
-        $user = DB::table('users')->where('id', $id)->first();
+        $user = DB::table('users')->where('id', '1')->first();
 
         return view('detail',['id' => $user->id,'name' => $user->name, 'mc' => $user->mc,'tc' => $user->tc,'hw' => $user->hw,'bs' => $user->bs,'ks' => $user->ks,'ac' => $user->ac]);
     }

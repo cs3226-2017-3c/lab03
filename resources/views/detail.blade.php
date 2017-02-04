@@ -15,7 +15,7 @@
           </div>
           <div class="col-md-6 hidden-xs hidden-sm">
             <img class="pull-right" id="photo" src="../img/locked.png" alt="Photo of {{ $student->name }}" width="96" height="150">
-            <img class="pull-right" id="flag" src="../flags/4x3/{{strtolower($s->country)}}.svg" alt="{{$s->country}} Flag" width="100">
+            <img class="pull-right" id="flag" src="../flags/4x3/{{strtolower($student->country)}}.svg" alt="{{$student->country}} Flag" width="100">
           </div>
         </div>
     </div>

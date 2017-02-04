@@ -18,7 +18,8 @@ class StudentController extends Controller
     } 
 
     public function detail($id) {
-        require_once '/var/www/html/cs3226/vendor/fzaninotto/faker/src/autoload.php';
+        require_once 'vendor/autoload.php';
+
 
         $faker = Faker\Factory::create();
 

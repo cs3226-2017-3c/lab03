@@ -16,6 +16,7 @@ class Student extends Migration
         Schema::create('student', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('country');
             $table->string('mc');
             $table->string('tc');
             $table->string('hw');

@@ -13,10 +13,8 @@ class StudentController extends Controller
      * @return Response
      */
     public function index() { 
-        $students = DB::table('student')->get();
-        usort($students, function($a, $b)
-        {
-            return $a->mc+$a->tc+$a->hw+$a->bs+$a->ks+$a->ac < $b->mc+$b->tc+$b->hw+$b->bs+$b->ks+$b->ac;
+        $students = DB::table('student')->get()->sortByDesc(function ($a, $key) {
+            return  $a->mc+$a->tc+$a->hw+$a->bs+$a->ks+$a->ac ;
         });
         return view('index', ['student' => $students]); 
     } 

@@ -1,6 +1,8 @@
 $(document).ready(function() 
 { 
-    $("#myTable").tablesorter([11,1]); 
+    $("#myTable").tablesorter(headers: {
+      11: { sortInitialOrder: 'desc' }
+    }); 
 } 
 ); 
 

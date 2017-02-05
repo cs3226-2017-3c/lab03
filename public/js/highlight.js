@@ -16,6 +16,7 @@ $(document).ready(function () {
     });
 
     
+    
     //Coloring
     var sum = $('.sum');
     var arr = sum.map(function(_,x) { return +$(x).text()}).get();
@@ -30,7 +31,7 @@ $(document).ready(function () {
 
     var last = Math.min.apply(Math, out);
 
-    var t = document.getElementsByClassName("sum");
+    var t = document.getElementById("myTable");
     for(var i = 0;i<t.rows.length;i++) {
         if(t.rows[i].cells.getElementsByClassName("sum") == first){
             t.rows[i].style.backgroundColor="gold";
@@ -45,6 +46,7 @@ $(document).ready(function () {
             t.rows[i].style.backgroundColor="pink";
         }
     }
+ 
 
     
     //highlight highest value

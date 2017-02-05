@@ -26,7 +26,7 @@ $(document).ready(function () {
     sum.filter(function() {
         var numb = +$(this).text();
         return numb == max;
-    }).css('font-weight', 'bold');
+    }).css('font-weight', 'italic');
 
     
     //highlight highest value

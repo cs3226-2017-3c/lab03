@@ -16,17 +16,36 @@ $(document).ready(function () {
     });
 
     
-    //Make max bold
+    //Coloring
     var sum = $('.sum');
     var arr = sum.map(function(_,x) { return +$(x).text()}).get();
-    var max = Math.max.apply(Math, arr);
-    var out = arr.filter(function(x) { return x != max});
-    var nxt = Math.max.apply(Math, out);
+    var first = Math.max.apply(Math, arr);
+    var out = arr.filter(function(x) { return x != first});
+    
+    var second = Math.max.apply(Math, out);
+    var out = arr.filter(function(x) { return x != second});
 
-    sum.filter(function() {
-        var numb = +$(this).text();
-        return numb == max;
-    }).css('font-weight', 'italic');
+    var third = Math.max.apply(Math, out);
+    var out = arr.filter(function(x) { return x != third});
+
+    var last = Math.min.apply(Math, out);
+
+    var t = document.getElementByClassName("sum");
+    for(var i = 0;i<t.rows.length;i++) {
+        if(t.rows[i].cells.getElementByClassName("sum") == first){
+            t.rows[i].style.backgroundColor="gold";
+        }
+        else if(t.rows[i].cells.getElementByClassName("sum") == second){
+            t.rows[i].style.backgroundColor="silver";
+        }
+        else if(t.rows[i].cells.getElementByClassName("sum") == third){
+            t.rows[i].style.backgroundColor="sienna";
+        }
+        else if(t.rows[i].cells.getElementByClassName("sum") == last) {
+            t.rows[i].style.backgroundColor="pink";
+        }
+    }
+
 
     
     //highlight highest value

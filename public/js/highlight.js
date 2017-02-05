@@ -30,22 +30,21 @@ $(document).ready(function () {
 
     var last = Math.min.apply(Math, out);
 
-    var t = document.getElementByClassName("sum");
+    var t = document.getElementsByClassName("sum");
     for(var i = 0;i<t.rows.length;i++) {
-        if(t.rows[i].cells.getElementByClassName("sum") == first){
+        if(t.rows[i].cells.getElementsByClassName("sum") == first){
             t.rows[i].style.backgroundColor="gold";
         }
-        else if(t.rows[i].cells.getElementByClassName("sum") == second){
+        else if(t.rows[i].cells.getElementsByClassName("sum") == second){
             t.rows[i].style.backgroundColor="silver";
         }
-        else if(t.rows[i].cells.getElementByClassName("sum") == third){
+        else if(t.rows[i].cells.getElementsByClassName("sum") == third){
             t.rows[i].style.backgroundColor="sienna";
         }
-        else if(t.rows[i].cells.getElementByClassName("sum") == last) {
+        else if(t.rows[i].cells.getElementsByClassName("sum") == last) {
             t.rows[i].style.backgroundColor="pink";
         }
     }
-
 
     
     //highlight highest value

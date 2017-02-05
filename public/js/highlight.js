@@ -16,36 +16,18 @@ $(document).ready(function () {
     });
 
     
-    //Class gold and pink
-    cols.forEach(function(col, index){
-        var max = Math.max.apply(null, col);
-        var min = Math.min.apply(null, col)
-        $('#myTable tr').find('td:nth-child(12)').each(function(i, td){
-            if($(td).text() == max){
-                $(this).parent("tr").css("background-color", "gold")
-            }
-            if($(td).text() == min){
-                $(this).parent("tr").css("background-color", "pink")
-            }
-        })
-    })
-    //Class silver and brown
-    cols.forEach(function(col, index){
-        var max = Math.max.apply(null, col);
-        var scol = col.filter(function(x){return x != max});
-        var smax = Math.max.apply(null, scol);
-        
-        var tcol = scol.filter(function(x){return x != smax});
-        var tmax = Math.max.apply(null, tcol);
-        $('#myTable tr').find('td:nth-child(12)').each(function(i, td){
-            if($(td).text() == smax){
-                $(this).parent("tr").css("background-color", "silver")
-            }
-            if($(td).text() == tmax){
-                $(this).parent("tr").css("background-color", "#cd7f32")
-            }
-        })
-    })
+    //Make max bold
+    var sum = $('.sum');
+    var arr = sum.map(function(_,x) { return +$(x).text()}).get();
+    var max = Math.max.apply(Math, arr);
+    var out = arr.filter(function(x) { return x != max});
+    var nxt = Math.max.apply(Math, out);
+
+    sum.filter(function() {
+        var numb = +$(this).text();
+        return numb == max;
+    }).css('font-weight', 'bold');
+
     
     //highlight highest value
     cols.forEach(function(col, index){

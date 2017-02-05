@@ -15,7 +15,7 @@ $(document).ready(function () {
         })
     });
 
-    /*
+    
     //Class gold and pink
     cols.forEach(function(col, index){
         var max = Math.max.apply(null, col);
@@ -46,7 +46,7 @@ $(document).ready(function () {
             }
         })
     })
-    */
+    
     //highlight highest value
     cols.forEach(function(col, index){
         var max = Math.max.apply(null, col);

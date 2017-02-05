@@ -38,7 +38,7 @@
 							<td class="hidden-xs hidden-sm">{{$s->ks}}</td>
 							<td class="hidden-xs hidden-sm">{{$s->ac}}</td>
 							<td class="hidden-xs">{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
-							<td>{{$s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac}}</td>
+							<td class = "sum">{{$s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac}}</td>
 						</tr>
 					@endforeach
 					</tbody>

@@ -24,28 +24,29 @@ $(document).ready(function () {
     var out = arr.filter(function(x) { return x != first});
     
     var second = Math.max.apply(Math, out);
-    var out = arr.filter(function(x) { return x != second});
+    var out = out.filter(function(x) { return x != second});
 
     var third = Math.max.apply(Math, out);
-    var out = arr.filter(function(x) { return x != third});
 
     var last = Math.min.apply(Math, out);
 
     var t = document.getElementById("myTable");
+
     for(var i = 0; i < t.rows.length; i++) {
-        if(t.rows[i].cells[11] == first){ /* how to  use getElementsByClassName("sum") instead?*/
+        if(t.rows[i].cells[11].innerHTML == first){ /* how to  use getElementsByClassName("sum") instead?*/
             t.rows[i].style.backgroundColor="gold";
         }
-        else if(t.rows[i].cells[11] == second){
+        else if(t.rows[i].cells[11].innerHTML == second){
             t.rows[i].style.backgroundColor="silver";
         }
-        else if(t.rows[i].cells[11] == third){
+        else if(t.rows[i].cells[11].innerHTML == third){
             t.rows[i].style.backgroundColor="sienna";
         }
-        else if(t.rows[i].cells[11] == last) {
+        else if(t.rows[i].cells[11].innerHTML == last) {
             t.rows[i].style.backgroundColor="pink";
         }
     }
+
 
 
     

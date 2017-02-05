@@ -32,20 +32,21 @@ $(document).ready(function () {
     var last = Math.min.apply(Math, out);
 
     var t = document.getElementById("myTable");
-    for(var i = 0;i<t.rows.length;i++) {
-        if(t.rows[i].cells.getElementsByClassName("sum") == first){
+    for(var i = 0; i < t.rows.length; i++) {
+        if(t.rows[i].cells[11] == first){ /* how to  use getElementsByClassName("sum") instead?*/
             t.rows[i].style.backgroundColor="gold";
         }
-        else if(t.rows[i].cells.getElementsByClassName("sum") == second){
+        else if(t.rows[i].cells[11] == second){
             t.rows[i].style.backgroundColor="silver";
         }
-        else if(t.rows[i].cells.getElementsByClassName("sum") == third){
+        else if(t.rows[i].cells[11] == third){
             t.rows[i].style.backgroundColor="sienna";
         }
-        else if(t.rows[i].cells.getElementsByClassName("sum") == last) {
+        else if(t.rows[i].cells[11] == last) {
             t.rows[i].style.backgroundColor="pink";
         }
     }
+
 
     
     //highlight highest value

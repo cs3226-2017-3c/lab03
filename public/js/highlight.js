@@ -46,7 +46,6 @@ $(document).ready(function () {
             t.rows[i].style.backgroundColor="pink";
         }
     }
- 
 
     
     //highlight highest value

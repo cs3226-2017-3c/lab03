@@ -20,11 +20,11 @@ class StudentController extends Controller
     } 
 
     public function detail($id) {
-        $student = DB::table('student')->where('id', $id)->first();
+        $student = DB::table('student')->where('id', $id)->get();
         if ($student->isEmpty()){
             return view('404');
         } else {
-            return view('detail',['student' => $student]);
+            return view('detail',['student' => $student->first()]);
         }
     }
 }

@@ -34,16 +34,16 @@ $(document).ready(function () {
 
     for(var i = 0; i < t.rows.length; i++) {
         if(t.rows[i].cells[11].innerHTML == first){ /* how to  use getElementsByClassName("sum") instead?*/
-            t.rows[i].style.backgroundColor="gold";
+            t.rows[i].classList.add("gold");
         }
         else if(t.rows[i].cells[11].innerHTML == second){
-            t.rows[i].style.backgroundColor="silver";
+            t.rows[i].classList.add("silver");
         }
         else if(t.rows[i].cells[11].innerHTML == third){
-            t.rows[i].style.backgroundColor="sienna";
+            t.rows[i].classList.add("bronze");
         }
         else if(t.rows[i].cells[11].innerHTML == last) {
-            t.rows[i].style.backgroundColor="pink";
+            t.rows[i].classList.add("pink");
         }
     }
 

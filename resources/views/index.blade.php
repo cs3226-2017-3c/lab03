@@ -20,7 +20,7 @@
 							<th class="hidden-xs sortInitialOrder-desc" onclick= "setAllSameHeight()">KS</th>
 							<th class="hidden-xs sortInitialOrder-desc" onclick= "setAllSameHeight()">Ac</th>
 							<th class="sortInitialOrder-desc" onclick="setAllSameHeight()">DIL</th>
-							<th class="sortInitialOrder-desc" onclick="setTimeout(setAllDifferentHeight(),500)">Sum</th>
+							<th class="sortInitialOrder-desc">Sum</th>
 						</tr>
 					</thead>
 					<tbody>

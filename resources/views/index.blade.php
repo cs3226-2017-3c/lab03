@@ -24,10 +24,9 @@
 						</tr>
 					</thead>
 					<tbody>
-					<?php $count=1 ?>
 					@foreach($student as $s)
 						<tr>
-							<td><?php echo $count++ ?></td>
+							<td>{{ $loop->iteration}}</td>
 							<td class="hidden-xs"><span class="flag-icon flag-icon-{{strtolower($s->country)}}"></span>{{$s->country}}</td>
 							<td><img alt="" src="img/prof.png" height="15"><a href="student/{{$s->id}}">{{$s->name}}</a></td>
 							<td class="hidden-xs hidden-sm">{{$s->mc}}</td>

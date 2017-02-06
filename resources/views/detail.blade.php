@@ -3,6 +3,7 @@
 {{ $student->name }} - Student Detail
 @endsection
 @section('main')
+@yield('radarChart')
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-8 col-xs-12" >

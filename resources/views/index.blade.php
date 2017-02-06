@@ -11,16 +11,16 @@
 						<tr>
 							<th class="rank">R</th>
 							<th class="hidden-xs flag" onclick= "setAllSameHeight()">Flag</th>
-							<th onclick= "setAllSameHeight()">Name</th>
-							<th class="hidden-xs" onclick= "setAllSameHeight()">MC</th>
-							<th class="hidden-xs" onclick= "setAllSameHeight()">TC</th>
-							<th onclick= "setAllSameHeight()">SPE</th>
-							<th class="hidden-xs" onclick= "setAllSameHeight()">HW</th>
-							<th class="hidden-xs" onclick= "setAllSameHeight()">Bs</th>
-							<th class="hidden-xs" onclick= "setAllSameHeight()">KS</th>
-							<th class="hidden-xs" onclick= "setAllSameHeight()">Ac</th>
-							<th onclick= "setAllSameHeight()">DIL</th>
-							<th onclick= "setAllDifferentHeight()">Sum</th>
+							<th onclick="setAllSameHeight()">Name</th>
+							<th class="hidden-xs sortInitialOrder-desc" onclick= "setAllSameHeight()">MC</th>
+							<th class="hidden-xs sortInitialOrder-desc" onclick= "setAllSameHeight()">TC</th>
+							<th class="sortInitialOrder-desc" onclick="setAllSameHeight()">SPE</th>
+							<th class="hidden-xs sortInitialOrder-desc" onclick= "setAllSameHeight()">HW</th>
+							<th class="hidden-xs sortInitialOrder-desc" onclick= "setAllSameHeight()">Bs</th>
+							<th class="hidden-xs sortInitialOrder-desc" onclick= "setAllSameHeight()">KS</th>
+							<th class="hidden-xs sortInitialOrder-desc" onclick= "setAllSameHeight()">Ac</th>
+							<th class="sortInitialOrder-desc" onclick="setAllSameHeight()">DIL</th>
+							<th class="sortInitialOrder-desc" onclick="setAllDifferentHeight()">Sum</th>
 						</tr>
 					</thead>
 					<tbody>

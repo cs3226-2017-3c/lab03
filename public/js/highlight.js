@@ -33,7 +33,7 @@ $(document).ready(function () {
     var t = document.getElementById("myTable");
 
     for(var i = 0; i < t.rows.length; i++) {
-        if(t.rows[i].cells[11].innerHTML == first){ /* how to  use getElementsByClassName("sum") instead?*/
+        if(t.rows[i].cells.getElementsByClassName("sum") == first){ /* how to  use getElementsByClassName("sum") instead?*/
             t.rows[i].classList.add("gold");
         }
         else if(t.rows[i].cells[11].innerHTML == second){

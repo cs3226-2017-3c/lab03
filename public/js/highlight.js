@@ -1,6 +1,17 @@
 $(document).ready(function() 
 { 
-    $("#myTable").tablesorter(); 
+    $("#myTable").tablesorter(
+        // default sortInitialOrder setting
+        sortInitialOrder: "desc",
+
+        // pass the headers argument and passing a object
+        headers: {
+          // set initial sort order by column, this headers option setting overrides the sortInitialOrder option
+          0: { sortInitialOrder: 'asc' },
+          1: { sortInitialOrder: 'asc' },
+          2: { sortInitialOrder: 'asc' }
+        }
+    ); 
 } 
 ); 
 

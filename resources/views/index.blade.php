@@ -26,18 +26,18 @@
 					<tbody>
 					@foreach($student as $s)
 						<tr>
-							<td>{{ $loop->iteration}}</td>
+							<td>{{$loop->iteration}}</td>
 							<td class="hidden-xs"><span class="flag-icon flag-icon-{{strtolower($s->country)}}"></span>{{$s->country}}</td>
 							<td><img alt="" src="img/prof.png" height="15"><a href="student/{{$s->id}}">{{$s->name}}</a></td>
-							<td class="hidden-xs hidden-sm">{{$s->mc}}</td>
-							<td class="hidden-xs hidden-sm">{{$s->tc}}</td>
-							<td class="hidden-xs">{{$s->mc+$s->tc}}</td>
-							<td class="hidden-xs hidden-sm">{{$s->hw}}</td>
-							<td class="hidden-xs hidden-sm">{{$s->bs}}</td>
-							<td class="hidden-xs hidden-sm">{{$s->ks}}</td>
-							<td class="hidden-xs hidden-sm">{{$s->ac}}</td>
-							<td class="hidden-xs">{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
-							<td class = "sum">{{$s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac}}</td>
+							<td class="hidden-xs">{{$s->mc}}</td>
+							<td class="hidden-xs">{{$s->tc}}</td>
+							<td>{{$s->mc+$s->tc}}</td>
+							<td class="hidden-xs">{{$s->hw}}</td>
+							<td class="hidden-xs">{{$s->bs}}</td>
+							<td class="hidden-xs">{{$s->ks}}</td>
+							<td class="hidden-xs">{{$s->ac}}</td>
+							<td>{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
+							<td class ="sum">{{$s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac}}</td>
 						</tr>
 					@endforeach
 					</tbody>

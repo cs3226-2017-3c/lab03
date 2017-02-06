@@ -20,11 +20,12 @@ body {
     background-color: #cd7f32;
 }
 
+.pink {
+    background-color: pink;
+}
+
 span.cyan {
     color: cyan;
-}
-.empty { 
-    background-color: pink; 
 }
 
 .highlighted { 

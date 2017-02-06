@@ -20,7 +20,7 @@
 							<th class="hidden-xs" onclick= "setAllSameHeight()">KS</th>
 							<th class="hidden-xs" onclick= "setAllSameHeight()">Ac</th>
 							<th onclick= "setAllSameHeight()">DIL</th>
-							<th>Sum</th>
+							<th onclick= "setAllDifferentHeight()">Sum</th>
 						</tr>
 					</thead>
 					<tbody>

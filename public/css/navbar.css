@@ -28,7 +28,7 @@ span.cyan {
 }
 
 .highlighted { 
-    background-color: orange; 
+    background-color: rgba(255, 165, 0, 0.4);
 }
 
 #flag {

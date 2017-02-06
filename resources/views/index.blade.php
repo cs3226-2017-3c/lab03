@@ -12,14 +12,14 @@
 							<th class="rank">R</th>
 							<th class="hidden-xs flag" onclick= "setAllSameHeight()">Flag</th>
 							<th onclick= "setAllSameHeight()">Name</th>
-							<th class="hidden-xs hidden-sm" onclick= "setAllSameHeight()">MC</th>
-							<th class="hidden-xs hidden-sm" onclick= "setAllSameHeight()">TC</th>
-							<th class="hidden-xs" onclick= "setAllSameHeight()">SPE</th>
-							<th class="hidden-xs hidden-sm" onclick= "setAllSameHeight()">HW</th>
-							<th class="hidden-xs hidden-sm" onclick= "setAllSameHeight()">Bs</th>
-							<th class="hidden-xs hidden-sm" onclick= "setAllSameHeight()">KS</th>
-							<th class="hidden-xs hidden-sm" onclick= "setAllSameHeight()">Ac</th>
-							<th class="hidden-xs" onclick= "setAllSameHeight()">DIL</th>
+							<th class="hidden-xs" onclick= "setAllSameHeight()">MC</th>
+							<th class="hidden-xs" onclick= "setAllSameHeight()">TC</th>
+							<th onclick= "setAllSameHeight()">SPE</th>
+							<th class="hidden-xs" onclick= "setAllSameHeight()">HW</th>
+							<th class="hidden-xs" onclick= "setAllSameHeight()">Bs</th>
+							<th class="hidden-xs" onclick= "setAllSameHeight()">KS</th>
+							<th class="hidden-xs" onclick= "setAllSameHeight()">Ac</th>
+							<th onclick= "setAllSameHeight()">DIL</th>
 							<th>Sum</th>
 						</tr>
 					</thead>

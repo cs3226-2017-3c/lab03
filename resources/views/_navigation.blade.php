@@ -12,17 +12,9 @@
   		</div>
   		<div id="navbar" class="navbar-collapse collapse">
   			<ul class="nav navbar-nav">
-  				<li><a href="/">Home</a></li>
-  				<li><a href="/help">Help</a></li>
+  				<li id="home" class="active"><a href="/">Home</a></li>
+  				<li id="help"><a href="/help">Help</a></li>
   			</ul>
   		</div><!--/.nav-collapse -->
   	</div><!--/.container-fluid -->
   </nav>
-  <script type="text/javascript">
-  $(document).ready(function() {
-	// get current URL path and assign 'active' class
-	var pathname = window.location.pathname;
-	$('.nav > li > a[href="'+pathname+'"]').parent().addClass('active');
-})
-
-  </script>

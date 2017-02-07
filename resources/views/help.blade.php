@@ -86,10 +86,7 @@ Help
           </div>
         </div>
         <!-- /container -->
-		<script type="text/javascript">
-		$(document).ready(function() {
-			$(".nav li").removeClass("active");
-			$('#help').addClass('active');
-		});	
-		</script>
         @endsection
+		@section('footer')
+		<script type="text/javascript" src="js/pgIndicate.js"></script>
+		@endsection

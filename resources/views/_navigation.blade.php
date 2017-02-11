@@ -14,12 +14,14 @@
   			<ul class="nav navbar-nav">
   				<li id="home" @if(Request::path()=="/")class="active"@endif}}><a href="/">Home</a></li>
   				<li id="help" @if(Request::is('help'))class="active"@endif}}><a href="/help">Help</a></li>
-          @if(Request::is('student/create'))<li id="Create Student Mode" class="active"><a href="#">Create Student Mode</a></li>
-          @elseif(Request::is('student/*/edit'))<li id="Edit Mode" class="active"><a href="#">Edit Mode</a></li>
-          @elseif(Request::is('student/*/upload'))<li id="Upload Mode" class="active"><a href="#">Upload Mode</a></li>
-          @elseif(Request::is('student/*'))<li id="Detail Mode" class="active"><a href="#">Detail Mode</a></li>
-          @else
-          @endif
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@if(Request::is('student/create')) Create Student Mode @elseif(Request::is('student/*/edit')) Edit Mode @elseif(Request::is('student/*')) Detail Mode @else @endif <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Edit Mode</a></li>
+              <li><a href="#">Upload Mode</a></li>
+              <li><a href="#">Detail Mode</a></li>
+            </ul>
+          </li>
   			</ul>
   		</div><!--/.nav-collapse -->
   	</div><!--/.container-fluid -->

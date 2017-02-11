@@ -8,19 +8,19 @@ body {
   margin-bottom: 20px;
 }
 
-.gold {
+.first {
     background-color: gold;
 }
 
-.silver {
+.second {
     background-color: silver;
 }
 
-.bronze {
+.third {
     background-color: #cd7f32;
 }
 
-.pink {
+.last {
     background-color: pink;
 }
 
@@ -28,7 +28,7 @@ span.cyan {
     color: cyan;
 }
 
-.highlighted { 
+.tobeorange { 
     background-color: rgba(255, 165, 0, 0.4);
 }
 

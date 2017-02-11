@@ -17,18 +17,30 @@
       <div class="col-md-4 hidden-xs hidden-sm">
         <img class="pull-right" id="photo" src="@if($student->avatar) {{Storage::url($student->avatar)}} @else ../img/locked.png @endif" alt="Photo of {{ $student->name }}" width="100" height="100">
         <img class="pull-right" id="flag" src="../flags/4x3/{{strtolower($student->country)}}.svg" alt="{{$student->country}} Flag" width="100">
+        
       </div>
+      <div><canvas id="myChart" width="400" height="400"></canvas></div>
     </div>
   </div>
-  <div><canvas id="myChart" width="400" height="400"></canvas></div>
+  
   @endsection
 @section('footer')
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <script>
   var ctx = document.getElementById("myChart");
   var myChart = new Chart(ctx, {
       type: 'radar',
       labels: ["MC", "TC", "HW", "Bs", "KS", "Ac"],
-      data: [$student->mc,$student->tc,$student->hw,$student->bs,$student->ks,$student->ac]
+      datasets: {
+        label: "My First dataset",
+        backgroundColor: "rgba(179,181,198,0.2)",
+        borderColor: "rgba(179,181,198,1)",
+        pointBackgroundColor: "rgba(179,181,198,1)",
+        pointBorderColor: "#fff",
+        pointHoverBackgroundColor: "#fff",
+        pointHoverBorderColor: "rgba(179,181,198,1)",
+        data: [$student->mc,$student->tc,$student->hw,$student->bs,$student->ks,$student->ac]
+      },
 
   });
   </script>

@@ -39,7 +39,7 @@
         pointBorderColor: "#fff",
         pointHoverBackgroundColor: "#fff",
         pointHoverBorderColor: "rgba(179,181,198,1)",
-        data: [$student->mc,$student->tc,$student->hw,$student->bs,$student->ks,$student->ac]
+        data: [{{$student->mc}},{{$student->tc}},{{$student->hw}},{{$student->bs}},{{$student->ks}},{{$student->ac}}]
       },
 
   });

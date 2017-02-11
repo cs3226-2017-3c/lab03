@@ -5,6 +5,9 @@ Home
 @section('main') <!-- define a section called main -->
 
 <?php
+
+// Determining value of first, second, third and last
+
 	$sums = [];
 	$i = 0;
 	foreach($student as $s) {
@@ -42,6 +45,19 @@ Home
 	$sums = array_values($sums);
 
 	$third = $sums[0];
+
+//Determining highest value for each category
+	$noofcategories = 8;
+	$categories = ["$s->mc", "$s->tc", "$s->mc + $s->tc", "$s->hw", "$s->bs", "$s->ks", "$s->ac", "$s->hw+$s->bs+$s->ks+$s->ac"];
+	$highest = [0,0,0,0,0,0,0,0];
+	for($i=0;$i<$noofcategories;$i++){
+		foreach ($student as $s) {
+			if($categories[$i] > $highest[$i]){
+				$highest[$i] = $categories[$i];
+			}
+		}
+	}
+	var_dump($highest);
 
 ?>
 

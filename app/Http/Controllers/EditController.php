@@ -17,7 +17,7 @@ class EditController extends Controller
         }        
     } 
 
-    public function store($id, Request $request) {
+    public function store(Request $request) {
 
     }      
 }

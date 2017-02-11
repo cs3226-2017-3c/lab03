@@ -18,7 +18,7 @@ class UploadController extends Controller
         }
     } 
 
-    public function store($user_id, Request $request) {
+    public function store(Request $request) {
         Validator::make($request->all(), [
             'avatar' => 'required|max:1024|mimetypes:image/jpeg,image/bmp,image/gif',
             'id' => 'required|exists:student,id',

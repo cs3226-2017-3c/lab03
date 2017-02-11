@@ -17,15 +17,24 @@
           @if(Request::is('student/create'))
           <li id="create-mode" class="active"><a href="#">Create Mode</a></li>
           @endif
-          @if(Request::is('student/*'))
+          @if(Request::is('student/*/*'))
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="active">@if(Request::is('student/*/edit')) Edit Mode @elseif(Request::is('student/*/upload')) Upload Mode @else Detail Mode @endif <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@if(Request::is('student/*/edit')) Edit Mode @elseif(Request::is('student/*/upload')) Upload Mode @else @endif <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="../edit">@if(Request::is('student/*/edit')) @else Edit Mode @endif</a></li>
-              <li><a href="../upload">@if(Request::is('student/*/upload')) @else Upload Mode @endif</a></li>
-              <li><a href="../">@if(Request::is('student/*/*')) Detail Mode @else  @endif</a></li>
+              <li><a href="edit">@if(Request::is('student/*/edit')) @else Edit Mode @endif</a></li>
+              <li><a href="upload">@if(Request::is('student/*/upload')) @else Upload Mode @endif</a></li>
+              <li><a href="..">Detail Mode</a></li>
             </ul>
           </li>
+          @elseif(Request::is('student/*')
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Detail Mode<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="edit">Edit Mode</a></li>
+              <li><a href="upload">Upload Mode</a></li>
+            </ul>
+          </li>
+          @else
           @endif
   			</ul>
   		</div><!--/.nav-collapse -->

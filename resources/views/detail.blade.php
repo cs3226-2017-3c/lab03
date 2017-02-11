@@ -19,7 +19,7 @@
         <img class="pull-right" id="flag" src="../flags/4x3/{{strtolower($student->country)}}.svg" alt="{{$student->country}} Flag" width="100">
         
       </div>
-      <div><canvas id="myChart" width="400" height="400"></canvas></div>
+      <div><canvas id="myChart" width="200" height="200"></canvas></div>
     </div>
   </div>
   
@@ -31,17 +31,18 @@
   var myChart = new Chart(ctx, {
       type: 'radar',
       labels: ["MC", "TC", "HW", "Bs", "KS", "Ac"],
-      datasets: {
-        label: "My First dataset",
-        backgroundColor: "rgba(179,181,198,0.2)",
-        borderColor: "rgba(179,181,198,1)",
-        pointBackgroundColor: "rgba(179,181,198,1)",
-        pointBorderColor: "#fff",
-        pointHoverBackgroundColor: "#fff",
-        pointHoverBorderColor: "rgba(179,181,198,1)",
-        data: [{{$student->mc}},{{$student->tc}},{{$student->hw}},{{$student->bs}},{{$student->ks}},{{$student->ac}}]
-      },
-
+      datasets: [
+        {
+          label: "My First dataset",
+          backgroundColor: "rgba(179,181,198,0.2)",
+          borderColor: "rgba(179,181,198,1)",
+          pointBackgroundColor: "rgba(179,181,198,1)",
+          pointBorderColor: "#fff",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(179,181,198,1)",
+          data: [{{$student->mc}},{{$student->tc}},{{$student->hw}},{{$student->bs}},{{$student->ks}},{{$student->ac}}]
+        },
+      ],
   });
   </script>
 @endsection

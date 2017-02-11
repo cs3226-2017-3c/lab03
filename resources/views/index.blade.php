@@ -132,61 +132,62 @@ Home
 					@elseif($sum == $third)
 					<tr class = "third">					
 					@elseif($sum == $last)
-					<tr class = "last">					
+					<tr class = "last">	
+					@else
+					<tr>				
 					@endif
-
 						<td>{{$loop->iteration}}</td>
 						<td class="hidden-xs"><span class="flag-icon flag-icon-{{strtolower($s->country)}}"></span>{{$s->country}}</td>
 						<td><img class="hidden-xs" alt="" src="img/prof.png" height="15"><a href="student/{{$s->id}}">{{$s->name}}</a></td>
 					@if($s->mc == $highest["mc"])
-					<td class="tobeorange">{{$s->mc}}</td>
+					<td class="orange hidden-xs">{{$s->mc}}</td>
 					@else
 					<td class="hidden-xs">{{$s->mc}}</td>
 					@endif
 					
 					@if($s->tc==$highest["tc"])
-					<td class="tobeorange">{{$s->tc}}</td>
+					<td class="orange hidden-xs">{{$s->tc}}</td>
 					@else
 					<td class="hidden-xs">{{$s->tc}}</td>
 					@endif	
 					
 					@if($s->hw==$highest["hw"])
-					<td class="tobeorange">{{$s->hw}}</td>
+					<td class="orange hidden-xs">{{$s->hw}}</td>
 					@else
 					<td class="hidden-xs">{{$s->hw}}</td>
 					@endif							
 					
 					@if($s->mc+$s->tc==$highest["mctc"])
-					<td class="tobeorange">{{$s->mc+$s->tc}}</td>
+					<td class="orange hidden-xs">{{$s->mc+$s->tc}}</td>
 					@else
 					<td class="hidden-xs">{{$s->mc+$s->tc}}</td>
 					@endif
 					
 					@if($s->bs==$highest["bs"])
-					<td class="tobeorange">{{$s->bs}}</td>
+					<td class="orange hidden-xs">{{$s->bs}}</td>
 					@else
 					<td class="hidden-xs">{{$s->bs}}</td>
 					@endif		
 
 					@if($s->ks==$highest["ks"])
-					<td class="tobeorange">{{$s->ks}}</td>
+					<td class="orange hidden-xs">{{$s->ks}}</td>
 					@else
 					<td class="hidden-xs">{{$s->ks}}</td>
 					@endif	
 					
 					@if($s->ac==$highest["ac"])
-					<td class="tobeorange">{{$s->ac}}</td>
+					<td class="orange hidden-xs">{{$s->ac}}</td>
 					@else
 					<td class="hidden-xs">{{$s->ac}}</td>
 					@endif	
 					
 					@if($s->hw+$s->bs+$s->ks+$s->ac==$highest["hwbsksac"])
-					<td class="tobeorange">{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
+					<td class="orange hidden-xs">{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
 					@else
 					<td class="hidden-xs">{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
 					@endif					
 						
-						<td class ="sum">{{$s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac}}</td>
+					<td class ="sum">{{$s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac}}</td>
 					</tr>
 					@endforeach
 				</tbody>

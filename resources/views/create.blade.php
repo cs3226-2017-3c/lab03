@@ -18,11 +18,20 @@ Create Student
 				{!! Form::radio('mcq', '11', false, ['class' => 'form-control']) !!}C.11
 			</div>
 			<div class="form-group">
-				echo Form::select('size', ['L' => 'Large', 'S' => 'Small'], null, ['multiple' => true]);
+			{!! Form::select('size', ['L' => 'Large', 'S' => 'Small'], null, ['multiple' => true]) !!}
 			</div>
 			<div class="form-group"> {{-- Don't forget to create a submit button --}}
 				{!! Form::submit('Submit', ['class' => 'form-control']) !!}
 			</div>
+			@if (count($errors) > 0) {{-- just list down all errors found --}}
+				<div class="alert alert-danger">
+					<ul>
+						@foreach ($errors->all() as $error)
+							<li>{{ $error }}</li>
+						@endforeach
+					</ul>
+				</div>
+				@endif
 				{!! Form::close() !!}
 		</div>
 	</div>

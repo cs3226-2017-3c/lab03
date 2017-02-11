@@ -25,7 +25,7 @@ class Student extends Migration
             $table->string('bs');
             $table->string('ks');
             $table->string('ac');  
-            $table->string('avatar');
+            $table->string('avatar')->nullable();
             $table->string('comment');            
             $table->timestamps();
         });

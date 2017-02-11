@@ -13,7 +13,7 @@ Home
 		$i = $i+1;
 	}
 	arsort($sums);
-	echo count($sums);
+	echo $sums[count($sums)-1];
 ?>
 <div class="container-fluid">
 	<div class="row">

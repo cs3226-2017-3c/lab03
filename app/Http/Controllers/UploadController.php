@@ -20,10 +20,10 @@ class UploadController extends Controller
 
     public function store(Request $request) {
         Validator::make($request->all(), [
-            'avatar' => 'required|max:1024|mimetypes:image/jpeg,image/bmp,image/gif',
+            'avatar' => 'required|size:1024|mimetypes:image/jpeg,image/bmp,image/gif',
             'id' => 'required|exists:student,id',
         ],[
-            'max' => 'This file is too large to upload. Max file size allowed: 1MB.',
+            'size' => 'This file is too large to upload. Max file size allowed: 1MB.',
             'mimetypes' => 'Please upload image file. Allowed extensions: jpg, jpeg, bmp, gif.',
             'exists' => 'Student does not exist.',
         ])->validate();

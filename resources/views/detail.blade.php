@@ -45,11 +45,10 @@
       },
       options: {
         scale: {
-          reverse: true,
-            ticks: {
-              min: 0,
-              max: 9,
-            }
+          ticks: {
+            min: 0,
+            max: 9,
+          }
         }
       }
     });

@@ -41,9 +41,15 @@ class StudentController extends Controller
     public function upload_image(Request $request) {
         $path = $request->file('avatar')->store("public/avatar");
         $id = $request->input('id');
-        DB::table('student')
-            ->where('id', $id)
-            ->update(['avatar' => $path]);        
-        return detail($id);
+        $student = DB::table('student')->where('id', $id)->get();
+        if ($student->isEmpty()){
+            return view('404');
+        } else {
+            DB::table('student')
+                ->where('id', $id)
+                ->update(['avatar' => $path]);
+            $student = DB::table('student')->where('id', $id)->get();        
+            return view('detail',['student' => $student->first()]);
+        }
     }      
 }

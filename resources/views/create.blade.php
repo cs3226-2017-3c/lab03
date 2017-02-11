@@ -21,7 +21,7 @@ Create Student
 			</div>
 			<div class="form-group">
 			{!! Form::label('nationality', 'Nationality:', ['class' => 'control-label']) !!}
-			{!! Form::select('nationality', ['SN' => 'Select Nationality', 'SGP' => 'SGP - Singaporean', 'CHN' => 'CHN - Chinese', 'VNM' => 'VNM - Vietnamese', 'IDN' => 'IDN - Indonesian', 'OTH' => 'OTH - Other Nationality'], 'Select Nationality') !!}
+			{!! Form::select('nationality', ['' => 'Select Nationality', 'SGP' => 'SGP - Singaporean', 'CHN' => 'CHN - Chinese', 'VNM' => 'VNM - Vietnamese', 'IDN' => 'IDN - Indonesian', 'OTH' => 'OTH - Other Nationality'], 'Select Nationality') !!}
 			</div>
 			<div class="form-group"> {{-- Don't forget to create a submit button --}}
 				{!! Form::submit('Create', ['class' => 'form-control']) !!}

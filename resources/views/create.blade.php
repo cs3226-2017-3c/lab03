@@ -18,7 +18,7 @@ Create Student
 				{!! Form::radio('mcq', '11', false, ['class' => 'form-control']) !!}C.11
 			</div>
 			<div class="form-group">
-			{!! Form::select('size', ['L' => 'Large', 'S' => 'Small'], null, ['multiple' => true]) !!}
+			{!! Form::select('size', ['SN' => 'Select Nationality', 'SGP' => 'SGP - Singaporean', 'CHN' => 'CHN - Chinese', 'VNM' => 'VNM - Vietnamese', 'IDN' => 'IDN - Indonesian', 'OTH' => 'OTH - Other Nationality'], 'Select Nationality') !!}
 			</div>
 			<div class="form-group"> {{-- Don't forget to create a submit button --}}
 				{!! Form::submit('Submit', ['class' => 'form-control']) !!}

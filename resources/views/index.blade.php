@@ -150,19 +150,19 @@ Home
 					@else
 					<td class="hidden-xs">{{$s->tc}}</td>
 					@endif	
+						
+					@if($s->mc+$s->tc==$highest["mctc"])
+					<td class="orange">{{$s->mc+$s->tc}}</td>
+					@else
+					<td>{{$s->mc+$s->tc}}</td>
+					@endif
 					
 					@if($s->hw==$highest["hw"])
 					<td class="orange hidden-xs">{{$s->hw}}</td>
 					@else
 					<td class="hidden-xs">{{$s->hw}}</td>
-					@endif							
-					
-					@if($s->mc+$s->tc==$highest["mctc"])
-					<td class="orange hidden-xs">{{$s->mc+$s->tc}}</td>
-					@else
-					<td class="hidden-xs">{{$s->mc+$s->tc}}</td>
-					@endif
-					
+					@endif	
+
 					@if($s->bs==$highest["bs"])
 					<td class="orange hidden-xs">{{$s->bs}}</td>
 					@else
@@ -182,12 +182,12 @@ Home
 					@endif	
 					
 					@if($s->hw+$s->bs+$s->ks+$s->ac==$highest["hwbsksac"])
-					<td class="orange hidden-xs">{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
+					<td class="orange">{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
 					@else
-					<td class="hidden-xs">{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
+					<td>{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
 					@endif					
 						
-					<td class ="sum">{{$s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac}}</td>
+					<td>{{$s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac}}</td>
 					</tr>
 					@endforeach
 				</tbody>

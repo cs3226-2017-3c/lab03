@@ -43,6 +43,13 @@
           data: [{{$student->mc}},{{$student->tc}},{{$student->hw}},{{$student->bs}},{{$student->ks}},{{$student->ac}}]
         },
       ],
+      options: {
+        scale: {
+          ticks: {
+              beginAtZero: true
+          },
+        }
+      }
     }
   });
   </script>

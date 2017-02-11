@@ -23,7 +23,7 @@
       </div>
     </div>
   </div>
-  <canvas id="myChart" width="400" height="400"></canvas>
+  <div><canvas id="myChart" width="400" height="400"></canvas></div>
   @endsection
 @section('footer')
   <script>

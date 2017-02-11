@@ -16,13 +16,17 @@ class Student extends Migration
         Schema::create('student', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('nickname');
+            $table->string('kattis');
             $table->string('country');
             $table->string('mc');
             $table->string('tc');
             $table->string('hw');
             $table->string('bs');
             $table->string('ks');
-            $table->string('ac');            
+            $table->string('ac');  
+            $table->string('avatar');
+            $table->string('comment');            
             $table->timestamps();
         });
     }

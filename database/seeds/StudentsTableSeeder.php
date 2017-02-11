@@ -18,6 +18,8 @@ class StudentsTableSeeder extends Seeder
         for ($i = 0; $i < $limit; $i++) {
             DB::table('student')->insert([ //,
                 'name'=>$faker->unique()->name,
+                'nickname'=>$faker->unique()->word,
+                'kattis'=>$faker->unique()->word,
                 'country' => $faker->countryCode,
                 'mc' => $faker->randomDigit,
                 'tc' => $faker->randomDigit,
@@ -25,6 +27,7 @@ class StudentsTableSeeder extends Seeder
                 'bs' => $faker->randomDigit,
                 'ks' => $faker->randomDigit,
                 'ac' => $faker->randomDigit,
+                'comment' => $faker->text($maxNbChars = 100),
             ]);
         }
     }

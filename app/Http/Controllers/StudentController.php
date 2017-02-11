@@ -47,9 +47,8 @@ class StudentController extends Controller
         } else {
             DB::table('student')
                 ->where('id', $id)
-                ->update(['avatar' => $path]);
-            $student = DB::table('student')->where('id', $id)->get();        
-            return view('detail',['student' => $student->first()]);
+                ->update(['avatar' => $path]); 
+            return redirect()->action('StudentController@detail',['id' => $id])
         }
     }      
 }

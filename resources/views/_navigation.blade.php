@@ -12,11 +12,11 @@
   		</div>
   		<div id="navbar" class="navbar-collapse collapse">
   			<ul class="nav navbar-nav">
-  				<li id="home" @if(Request::is(''))class="active"@endif}}><a href="/">Home</a></li>
+  				<li id="home" @if(Request::path()=="/")class="active"@endif}}><a href="/">Home</a></li>
   				<li id="help" @if(Request::is('help'))class="active"@endif}}><a href="/help">Help</a></li>
-          @if(Request::is('student/create'))<li id="Create Student Mode" class="active"><a href="#">Create Student Mode</a></li>@endif}}
-          @if(Request::is('*/edit'))<li id="Edit Mode" class="active"><a href="#">Edit Mode</a></li>@endif}}
-          @if(Request::is('student/*'))<li id="Detail Mode" class="active"><a href="#">Detail Mode</a></li>@endif}}
+          @if(Request::is('student/create'))<li id="Create Student Mode" class="active"><a href="#">Create Student Mode</a></li>@endif
+          @if(Request::is('*/edit'))<li id="Edit Mode" class="active"><a href="#">Edit Mode</a></li>@endif
+          @if(Request::is('student/*'))<li id="Detail Mode" class="active"><a href="#">Detail Mode</a></li>@endif
   			</ul>
   		</div><!--/.nav-collapse -->
   	</div><!--/.container-fluid -->

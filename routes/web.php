@@ -16,6 +16,12 @@ Route::get('student/{id}', 'StudentController@detail');
 Route::get('help', function() { return view('help'); });
 Route::get('student/{id}/upload', 'UploadController@upload');
 Route::post('student/upload', 'UploadController@store');
+<<<<<<< HEAD
 
 Route::get('test', 'FormController@test');
 Route::post('test/t', 'FormController@check'); // notice the POST method
+=======
+Route::get('student/{id}/edit', 'EditController@edit');
+Route::post('student/{id}/edit', 'EditController@store');
+Route::get('test', function(){ return View::make('test');});
+>>>>>>> origin/master

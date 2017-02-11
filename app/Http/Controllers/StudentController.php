@@ -21,11 +21,14 @@ class StudentController extends Controller
     } 
 
     public function detail($id) {
+        $leader = DB::table('student')->get()->sortByDesc(function ($a, $key) {
+            return  $a->mc+$a->tc+$a->hw+$a->bs+$a->ks+$a->ac ;
+        })->first();
         $student = DB::table('student')->where('id', $id)->get();
         if ($student->isEmpty()){
             return view('404');
         } else {
-            return view('detail',['student' => $student->first()]);
+            return view('detail',['student' => $student->first(), 'leader'] => $leader);
         }
     }
 

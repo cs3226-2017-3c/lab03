@@ -41,6 +41,16 @@
             pointHoverBorderColor: "rgba(179,181,198,1)",
             data: [{{$student->mc}},{{$student->tc}},{{$student->hw}},{{$student->bs}},{{$student->ks}},{{$student->ac}}],
           },
+           {
+            label: "[Leader] {{$leader->name}}",
+            backgroundColor: "rgba(255,99,132,0.2)",
+            borderColor: "rgba(255,99,132,1)",
+            pointBackgroundColor: "rgba(255,99,132,1)",
+            pointBorderColor: "#fff",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(255,99,132,1)",
+            data: [{{$leader->mc}},{{$leader->tc}},{{$leader->hw}},{{$leader->bs}},{{$leader->ks}},{{$leader->ac}}],
+          },         
         ],
       },
       options: {

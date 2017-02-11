@@ -87,6 +87,3 @@ Help
         </div>
         <!-- /container -->
         @endsection
-		@section('footer')
-		<script type="text/javascript" src="js/pgIndicate.js"></script>
-		@endsection

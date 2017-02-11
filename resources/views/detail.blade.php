@@ -1,8 +1,6 @@
 
 @extends('template')
-@section('header')
 <script type="text/javascript" src="js/Chart.js"></script>
-@endsection
 @section('title')
 {{ $student->name }} - Student Detail
 @endsection

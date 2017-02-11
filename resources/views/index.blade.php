@@ -70,14 +70,15 @@ Home
 					<?php $sum = $s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac; ?>
 
 					@if($sum == $first)
-					<?php echo "first"; ?>
+					<tr class = "first">
 					@elseif($sum == $second)
-					<?php echo "second"; ?>
+					<tr class = "second">					
 					@elseif($sum == $third)
-					<?php echo "third"; ?>
+					<tr class = "third">					
+					@elseif($sum == $last)
+					<tr class = "last">					
 					@endif
 
-					<tr>
 						<td>{{$loop->iteration}}</td>
 						<td class="hidden-xs"><span class="flag-icon flag-icon-{{strtolower($s->country)}}"></span>{{$s->country}}</td>
 						<td><img class="hidden-xs" alt="" src="img/prof.png" height="15"><a href="student/{{$s->id}}">{{$s->name}}</a></td>

@@ -73,7 +73,7 @@ Home
 					<?php echo "first"; ?>
 					@elseif($sum == $second)
 					<?php echo "second"; ?>
-					@elsif($sum == $third)
+					@elseif($sum == $third)
 					<?php echo "third"; ?>
 					@endif
 

@@ -25,3 +25,25 @@ function setAllDifferentHeight()
     }    
 }
 
+function highlight()
+{
+    var t = document.getElementById("myTable");
+
+    var firsts = document.getElementsByClassName("first");
+    for(var i=0; i<firsts.length; i++){
+        firsts[i].style.backgroundColor = "gold";
+    }
+    var seconds = document.getElementsByClassName("second");
+    for(var i=0; i<seconds.length; i++){
+        seconds[i].style.backgroundColor = "silver";
+    }
+    var thirds = document.getElementsByClassName("third");
+    for(var i=0; i<thirds.length; i++){
+        thirds[i].style.backgroundColor = "brown";
+    }
+    var lasts = document.getElementsByClassName("last");
+    for (var i = lasts.length - 1; i >= 0; i--) {
+        lasts[i].style.backgroundColor = "pink";
+    };.
+
+}

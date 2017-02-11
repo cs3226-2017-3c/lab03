@@ -14,14 +14,19 @@
   			<ul class="nav navbar-nav">
   				<li id="home" @if(Request::path()=="/")class="active"@endif}}><a href="/">Home</a></li>
   				<li id="help" @if(Request::is('help'))class="active"@endif}}><a href="/help">Help</a></li>
+          @if(Request::is('student/create'))
+          <li id="create-mode" class="active"><a href="#">Create Mode</a></li>
+          @endif
+          @if(Request::is('student/*'))
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@if(Request::is('student/create')) Create Student Mode @elseif(Request::is('student/*/edit')) Edit Mode @elseif(Request::is('student/*')) Detail Mode @else @endif <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="active">@if(Request::is('student/*/edit')) Edit Mode @elseif(Request::is('student/*/upload')) Upload Mode @else Detail Mode @endif <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Edit Mode</a></li>
-              <li><a href="#">Upload Mode</a></li>
-              <li><a href="#">Detail Mode</a></li>
+              <li><a href="../edit">@if(Request::is('student/*/edit')) @else Edit Mode @endif</a></li>
+              <li><a href="../upload">@if(Request::is('student/*/upload')) @else Upload Mode @endif</a></li>
+              <li><a href="../">@if(Request::is('student/*/*')) Detail Mode @else  @endif</a></li>
             </ul>
           </li>
+          @endif
   			</ul>
   		</div><!--/.nav-collapse -->
   	</div><!--/.container-fluid -->

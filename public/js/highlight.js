@@ -49,7 +49,7 @@ function highlight()
 
     //orange for max cells
 
-    document.getElementById("")
+    document.getElementsByClassName("tobeorange").style.backgroundColor="orange";
 
 }
 

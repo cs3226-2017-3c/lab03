@@ -30,17 +30,27 @@
       data: {
         labels: ["MC", "TC", "HW", "Bs", "KS", "Ac"],
         datasets: 
-        {
-          label: "{{$student->name}}",
-          backgroundColor: "rgba(179,181,198,0.2)",
-          borderColor: "rgba(179,181,198,1)",
-          pointBackgroundColor: "rgba(179,181,198,1)",
-          pointBorderColor: "#fff",
-          pointHoverBackgroundColor: "#fff",
-          pointHoverBorderColor: "rgba(179,181,198,1)",
-          data: [{{$student->mc}},{{$student->tc}},{{$student->hw}},{{$student->bs}},{{$student->ks}},{{$student->ac}}],
-        },
+        [
+          {
+            label: "{{$student->name}}",
+            backgroundColor: "rgba(179,181,198,0.2)",
+            borderColor: "rgba(179,181,198,1)",
+            pointBackgroundColor: "rgba(179,181,198,1)",
+            pointBorderColor: "#fff",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(179,181,198,1)",
+            data: [{{$student->mc}},{{$student->tc}},{{$student->hw}},{{$student->bs}},{{$student->ks}},{{$student->ac}}],
+          },
+        ],
       },
+      options: {
+        scale: {
+          reverse: true,
+            ticks: {
+              beginAtZero: true
+            }
+        }
+      }
     });
   </script>
   @endsection

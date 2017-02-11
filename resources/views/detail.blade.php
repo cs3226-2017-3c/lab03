@@ -1,6 +1,6 @@
 
 @extends('template')
-<script type="text/javascript" src="js/Chart.js"></script>
+<script type="text/javascript" src="{{ URL::asset('js/Chart.js') }}"></script>
 @section('title')
 {{ $student->name }} - Student Detail
 @endsection

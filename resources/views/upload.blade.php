@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-md-12" >
         <h2>Upload image for <strong>{{ $student->name }}</strong></h2>
-        {!! Form::open(['action' => ['StudentController@uploadImage', $student->id],'files' => 'true']) !!}
+        {!! Form::open(['action' => ['StudentController@upload_image', $student->id],'files' => 'true']) !!}
         <div class="form-group">
           {!! Form::file('avatar') !!}
         </div>

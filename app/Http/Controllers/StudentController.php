@@ -29,26 +29,5 @@ class StudentController extends Controller
         }
     }
 
-    public function upload($id) {
-        $student = DB::table('student')->where('id', $id)->get();
-        if ($student->isEmpty()){
-            return view('404');
-        } else {
-            return view('upload',['student' => $student->first()]);
-        }
-    }    
-
-    public function upload_image(Request $request) {
-        $path = $request->file('avatar')->store("public/avatar");
-        $id = $request->input('id');
-        $student = DB::table('student')->where('id', $id)->get();
-        if ($student->isEmpty()){
-            return view('404');
-        } else {
-            DB::table('student')
-                ->where('id', $id)
-                ->update(['avatar' => $path]); 
-            return redirect()->action('StudentController@detail',['id' => $id]);
-        }
-    }      
+         
 }

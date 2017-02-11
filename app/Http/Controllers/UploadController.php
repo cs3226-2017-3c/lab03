@@ -23,6 +23,8 @@ class UploadController extends Controller
             'avatar' => 'required|max:1024|mimetypes:image/jpeg,image/bmp,image/gif',
             'id' => 'required|exists:student,id',
             'g-recaptcha-response' => 'required|captcha',
+        ],[
+            'g-recaptcha-response.required' => 'The ReCaptcha is invalid.'
         ])->validate();
 
         $path = $request->file('avatar')->store("public/avatar");

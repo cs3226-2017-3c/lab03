@@ -17,7 +17,7 @@
       <div class="col-md-4 hidden-xs hidden-sm">
         <img class="pull-right" id="photo" src="@if($student->avatar) {{Storage::url($student->avatar)}} @else ../img/locked.png @endif" alt="Photo of {{ $student->name }}" width="100" height="100">
         <img class="pull-right" id="flag" src="../flags/4x3/{{strtolower($student->country)}}.svg" alt="{{$student->country}} Flag" width="100">
-        <div><canvas id="myChart" width="100" height="100"></canvas></div>
+        <canvas id="myChart" width="100" height="100"></canvas>
       </div>
     </div>
   </div>
@@ -28,7 +28,8 @@
   <script>
   var ctx = document.getElementById("myChart");
   var myChart = new Chart(ctx, {
-      type: 'radar',
+    type: 'radar',
+    data: {
       labels: ["MC", "TC", "HW", "Bs", "KS", "Ac"],
       datasets: [
         {
@@ -42,6 +43,7 @@
           data: [{{$student->mc}},{{$student->tc}},{{$student->hw}},{{$student->bs}},{{$student->ks}},{{$student->ac}}]
         },
       ],
+    }
   });
   </script>
 @endsection

@@ -10,10 +10,42 @@ Home
 	foreach($student as $s) {
 		$sum = $s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac;
 		$sums[$i] = $sum;
-		$i = $i+1;
+		$i++;
 	}
+	
 	arsort($sums);
-	echo $sums[count($sums)-1];
+	$last = $sums[count($sums)-1];
+	$first = $sums[0];
+	
+	$i = 0;
+	foreach($sums as $sum){
+
+		if($sums[$i] == $first){
+			unset($sums[$i]);
+		}
+	i++;
+	}
+
+	$second = $sums[0];
+	
+	$i = 0;
+	foreach($sums as $sum){
+
+		if($sums[$i] == $second){
+			unset($sums[$i]);
+		}
+	i++;
+	}
+
+	$third = $sums[0];
+
+	echo $first;
+
+	echo $second;
+
+	echo $third;
+
+	echo $last;
 ?>
 <div class="container-fluid">
 	<div class="row">

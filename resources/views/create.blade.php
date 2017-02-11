@@ -17,6 +17,9 @@ Create Student
 				{!! Form::radio('mcq', '10', false, ['class' => 'form-control']) !!}B.10
 				{!! Form::radio('mcq', '11', false, ['class' => 'form-control']) !!}C.11
 			</div>
+			<div class="form-group">
+				echo Form::select('size', ['L' => 'Large', 'S' => 'Small'], null, ['multiple' => true]);
+			</div>
 			<div class="form-group"> {{-- Don't forget to create a submit button --}}
 				{!! Form::submit('Submit', ['class' => 'form-control']) !!}
 			</div>

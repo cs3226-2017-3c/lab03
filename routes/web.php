@@ -19,4 +19,3 @@ Route::post('student/{id}/upload', 'UploadController@store');
 Route::get('student/{id}/edit', 'EditController@edit');
 Route::post('student/{id}/edit', 'EditController@store');
 Route::get('test', function(){ return View::make('test');});
-Route::get('*', function() { return view('404'); });

@@ -2,7 +2,6 @@ $(document).ready(function()
 { 
     $("#myTable").tablesorter(); 
     setAllDifferentHeight();
-    highlight();
 } 
 ); 
 

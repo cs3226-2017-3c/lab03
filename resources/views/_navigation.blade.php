@@ -26,7 +26,7 @@
               <li><a href="..">Detail Mode</a></li>
             </ul>
           </li>
-          @elseif(Request::is('student/*')
+          @elseif(Request::is('student/*'))
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Detail Mode<span class="caret"></span></a>
             <ul class="dropdown-menu">

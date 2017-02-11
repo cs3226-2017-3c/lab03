@@ -30,8 +30,8 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Detail Mode<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="{{Request::path()}}/edit">Edit Mode</a></li>
-              <li><a href="{{Request::path()}}/upload">Upload Mode</a></li>
+              <li><a href="/{{Request::path()}}/edit">Edit Mode</a></li>
+              <li><a href="/{{Request::path()}}/upload">Upload Mode</a></li>
             </ul>
           </li>
           @else

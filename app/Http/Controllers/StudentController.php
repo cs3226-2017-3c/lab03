@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class StudentController extends Controller
@@ -37,7 +38,8 @@ class StudentController extends Controller
         }
     }    
 
-    public function upload_image($id) {
-        //
+    public function upload_image(Request $request, $id) {
+        $path = $request->file('avatar')->store('avatars');
+        return $path;
     }      
 }

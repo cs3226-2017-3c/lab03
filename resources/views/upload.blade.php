@@ -19,6 +19,8 @@
         {!! Form::open(['action' => 'UploadController@store', 'files' => 'true']) !!}
         <div class="form-group">
           {!! Form::file('avatar') !!}
+        </div>
+        <div class="form-group">
           {!! app('captcha')->display(); !!}
           {!! Form::hidden('id', $student->id) !!}
         </div>

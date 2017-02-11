@@ -45,15 +45,6 @@ Home
 
 ?>
 
-<?php
-	echo $first;
-
-	echo $second;
-
-	echo $third;
-
-	echo $last;
-?>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-xs-12">
@@ -76,6 +67,16 @@ Home
 				</thead>
 				<tbody>
 					@foreach($student as $s)
+					<?php $sum = $s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac; ?>
+
+					@if($sum == $first)
+					<?php echo "first"; ?>
+					@elseif($sum == $second)
+					<?php echo "second"; ?>
+					@elsif($sum == $third)
+					<?php echo "third"; ?>
+					@endif
+
 					<tr>
 						<td>{{$loop->iteration}}</td>
 						<td class="hidden-xs"><span class="flag-icon flag-icon-{{strtolower($s->country)}}"></span>{{$s->country}}</td>

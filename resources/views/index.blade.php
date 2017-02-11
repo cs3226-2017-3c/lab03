@@ -23,7 +23,7 @@ Home
 		if($sums[$i] == $first){
 			unset($sums[$i]);
 		}
-	i++;
+	$i++;
 	}
 
 	$second = $sums[0];
@@ -34,7 +34,7 @@ Home
 		if($sums[$i] == $second){
 			unset($sums[$i]);
 		}
-	i++;
+	$i++;
 	}
 
 	$third = $sums[0];

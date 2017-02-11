@@ -61,3 +61,23 @@ td img, td span {
 .flag {
     width:70px;
 }
+
+.first {
+  background-color : gold;
+}
+
+.second {
+  background-color:  : silver;
+}
+
+.third {
+  background-color: :brown;
+}
+
+.last {
+  background-color: pink;
+}
+
+.tobeorange {
+  background-color: orange;
+}

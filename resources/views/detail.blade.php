@@ -3,7 +3,6 @@
 {{ $student->name }} - Student Detail
 @endsection
 @section('main')
-<script type="text/javascript" src="/js/Chart.js"></script>
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-8 col-xs-12" >

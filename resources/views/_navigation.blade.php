@@ -21,17 +21,17 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@if(Request::is('student/*/edit')) Edit Mode @elseif(Request::is('student/*/upload')) Upload Mode @else @endif <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="edit">@if(Request::is('student/*/edit')) @else Edit Mode @endif</a></li>
-              <li><a href="upload">@if(Request::is('student/*/upload')) @else Upload Mode @endif</a></li>
-              <li><a href="..">Detail Mode</a></li>
+              @if(Request::is('student/*/edit')) @else <li><a href="edit">Edit Mode</a></li>@endif
+              @if(Request::is('student/*/upload')) @else <li><a href="upload">Upload Mode</a></li>@endif
+              <li><a href=".">Detail Mode</a></li>
             </ul>
           </li>
           @elseif(Request::is('student/*'))
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Detail Mode<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="edit">Edit Mode</a></li>
-              <li><a href="upload">Upload Mode</a></li>
+              <li><a href="{{Request::path()}}/edit">Edit Mode</a></li>
+              <li><a href="{{Request::path()}}/upload">Upload Mode</a></li>
             </ul>
           </li>
           @else

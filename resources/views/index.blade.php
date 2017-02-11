@@ -40,6 +40,8 @@ Home
 	$i++;
 	}
 
+	$sums = array_values($sums);
+
 	$third = $sums[0];
 
 	echo $first;

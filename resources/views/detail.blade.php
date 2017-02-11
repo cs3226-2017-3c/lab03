@@ -33,7 +33,7 @@
       labels: ["MC", "TC", "HW", "Bs", "KS", "Ac"],
       datasets: [
         {
-          label: "My First dataset",
+          label: "{{$student->name}}",
           backgroundColor: "rgba(179,181,198,0.2)",
           borderColor: "rgba(179,181,198,1)",
           pointBackgroundColor: "rgba(179,181,198,1)",

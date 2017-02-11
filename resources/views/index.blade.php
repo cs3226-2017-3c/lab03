@@ -57,42 +57,42 @@ Home
 					if($s->mc > $highest[$i]){
 						$highest[$i] = $s->mc;
 					}
-					break
+					break;
 				case "1":
 					if($s->tc > $highest[$i]){
 						$highest[$i] = $s->tc;
 					}
-					break
+					break;
 				case "2":
 					if($s->tc+$s->mc > $highest[$i]){
 						$highest[$i] = $s->tc+$s->mc;
 					}
-					break
+					break;
 				case "3":
 					if($s->hw > $highest[$i]){
 						$highest[$i] = $s->hw;
 					}	
-					break	
+					break;	
 				case "4":
 					if($s->bs > $highest[$i]){
 						$highest[$i] = $s->bs;
 					}	
-					break		
+					break;		
 				case "5":
 					if($s->ks > $highest[$i]){
 						$highest[$i] = $s->ks;
 					}	
-					break	
+					break;
 				case "6":
 					if($s->ac > $highest[$i]){
 						$highest[$i] = $s->ac;
 					}
-					break		
+					break;		
 				case "7":
 					if($s->hw+$s->bs+$s->ks+$s->ac > $highest[$i]){
 						$highest[$i] = $s->hw+$s->bs+$s->ks+$s->ac;
 					}	
-					break	
+					break;	
 					
 			}
 

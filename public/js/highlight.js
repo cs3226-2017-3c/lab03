@@ -49,8 +49,10 @@ function highlight()
 
     //orange for max cells
 
-    document.getElementsByClassName("tobeorange").style.backgroundColor="orange";
-
+    var oranges = document.getElementsByClassName("tobeorange")
+    for (var i = 0 ; i<oranges.length; i++){
+        oranges[i].style.backgroundColor="orange";
+    }
 }
 
 

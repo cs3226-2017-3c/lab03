@@ -3,6 +3,18 @@
 Home
 @endsection
 @section('main') <!-- define a section called main -->
+
+<?php
+	$sums = []
+	$i = 0
+	foreach($student as $s) {
+		$sum = $s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac;
+		$sums[i] = $sum;
+		i++;
+	}
+	$sums.arsort();
+	echo $sums[count($sums)];
+?>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-xs-12">

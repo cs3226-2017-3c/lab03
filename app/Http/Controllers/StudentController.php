@@ -48,7 +48,7 @@ class StudentController extends Controller
             DB::table('student')
                 ->where('id', $id)
                 ->update(['avatar' => $path]); 
-            return redirect()->action('StudentController@detail',['id' => $id])
+            return redirect()->action('StudentController@detail',['id' => $id]);
         }
     }      
 }

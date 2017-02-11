@@ -10,9 +10,6 @@
         {!! Form::open(['action' => 'StudentController@upload_image','files' => 'true']) !!}
         <div class="form-group">
           {!! Form::file('avatar') !!}
-          {!! Form::file('avatar') !!}
-        </div>
-        <div class="form-group"> 
           {!! Form::text('id', '{{$student->id}}',['type' => 'hidden']) !!}
         </div>
         {!! Form::close() !!}

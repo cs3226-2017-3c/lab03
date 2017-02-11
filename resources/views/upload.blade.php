@@ -16,7 +16,7 @@
         </div>
       @endif
         <h2>Upload image for <strong>{{ $student->name }}</strong></h2>
-        {!! Form::open(['action' => 'StudentController@upload_image', 'files' => 'true']) !!}
+        {!! Form::open(['action' => 'UploadController@store', 'files' => 'true']) !!}
         <div class="form-group">
           {!! Form::file('avatar') !!}
           {!! Form::hidden('id', $student->id) !!}

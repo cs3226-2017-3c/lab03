@@ -25,6 +25,6 @@ function setAllDifferentHeight()
             t.rows[i].style.height = 30+30*(Math.abs(sumi-sumiminus1)).toString()+"px";
 
         }   
-    }, 100);
+    }, 50);
 }
 

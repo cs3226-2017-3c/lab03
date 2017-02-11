@@ -187,8 +187,12 @@ Home
 					<td>{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
 					@endif					
 						
-					<td>{{$s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac}}</td>
+					@if($sum == $first)
+					<td class="orange">{{$sum}}</td>
+					@else
+					<td>{{$sum}}</td>
 					</tr>
+					@endif
 					@endforeach
 				</tbody>
 			</table>

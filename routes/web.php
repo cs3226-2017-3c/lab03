@@ -17,5 +17,4 @@ Route::get('help', function() { return view('help'); });
 Route::get('student/{id}/upload', 'UploadController@upload');
 Route::post('student/upload', 'UploadController@store');
 
-Route::get('test', 'FormController@test');
-Route::post('test', 'FormController@check'); // notice the POST method
+Route::get('test', function(){ return View::make('test');});

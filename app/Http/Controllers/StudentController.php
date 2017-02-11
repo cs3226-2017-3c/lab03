@@ -39,8 +39,11 @@ class StudentController extends Controller
     }    
 
     public function upload_image(Request $request) {
-        $path = $request->file('avatar')->store('public/avatar');
+        $path = $request->file('avatar')->store('public/img');
         $id = $request->input('id');
-        return $id;
+        DB::table('users')
+            ->where('id', $id)
+            ->update(['avatar' => $path]);        
+        return $path;
     }      
 }

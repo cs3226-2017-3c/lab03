@@ -48,13 +48,47 @@ Home
 
 //Determining highest value for each category
 	$noofcategories = 8;
-	$categories = ["$s->mc", "$s->tc", "$s->mc + $s->tc", "$s->hw", "$s->bs", "$s->ks", "$s->ac", "$s->hw+$s->bs+$s->ks+$s->ac"];
+	$categories = ["mc", "tc", "mctc", "hw", "bs", "ks", "ac", "$s->hw+$s->bs+$s->ks+$s->ac"];
 	$highest = [0,0,0,0,0,0,0,0];
 	for($i=0;$i<$noofcategories;$i++){
 		foreach ($student as $s) {
-			if($categories[$i] > $highest[$i]){
-				$highest[$i] = $categories[$i];
+			switch ($i{
+				case "0":
+					if($s->mc > $highest[$i]){
+						$highest[$i] = $s->mc;
+					}
+				case "1":
+					if($s->tc > $highest[$i]){
+						$highest[$i] = $s->tc;
+					}
+				case "2":
+					if($s->tc+$s->mc > $highest[$i]){
+						$highest[$i] = $s->tc+$s->mc;
+					}
+				case "3":
+					if($s->hw > $highest[$i]){
+						$highest[$i] = $s->hw;
+					}		
+				case "4":
+					if($s->bs > $highest[$i]){
+						$highest[$i] = $s->bs;
+					}			
+				case "5":
+					if($s->ks > $highest[$i]){
+						$highest[$i] = $s->ks;
+					}		
+				case "6":
+					if($s->ac > $highest[$i]){
+						$highest[$i] = $s->ac;
+					}		
+				case "7":
+					if($s->hw+$s->bs+$s->ks+$s->ac > $highest[$i]){
+						$highest[$i] = $s->hw+$s->bs+$s->ks+$s->ac;
+					}		
+					
 			}
+
+
 		}
 	}
 	var_dump($highest);

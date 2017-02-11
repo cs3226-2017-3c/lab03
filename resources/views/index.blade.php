@@ -26,27 +26,29 @@ Home
 		}
 	$i++;
 	}
-	var_dump($sums);
-	//$second = $sums[0];
+
+	$sums = array_values($sums);
+
+	$second = $sums[0];
 	
-	// $i = 0;
-	// foreach($sums as $sum){
+	$i = 0;
+	foreach($sums as $sum){
 
-	// 	if($sums[$i] == $second){
-	// 		unset($sums[$i]);
-	// 	}
-	// $i++;
-	// }
+		if($sums[$i] == $second){
+			unset($sums[$i]);
+		}
+	$i++;
+	}
 
-	// $third = $sums[0];
+	$third = $sums[0];
 
-	// echo $first;
+	echo $first;
 
-	// echo $second;
+	echo $second;
 
-	// echo $third;
+	echo $third;
 
-	// echo $last;
+	echo $last;
 ?>
 <div class="container-fluid">
 	<div class="row">

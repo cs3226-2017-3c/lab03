@@ -47,7 +47,8 @@
         scale: {
           reverse: true,
             ticks: {
-              beginAtZero: true
+              min: 0,
+              max: 9,
             }
         }
       }

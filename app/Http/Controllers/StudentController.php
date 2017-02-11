@@ -38,7 +38,7 @@ class StudentController extends Controller
         }
     }    
 
-    public function upload_image(Request $request, $id) {
+    public function upload_image(Request $request) {
         $path = $request->file('avatar')->store('avatars');
         return $path;
     }      

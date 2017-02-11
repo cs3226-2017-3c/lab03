@@ -8,17 +8,20 @@ Create Student
 		<div class="col-md-12">
 			{!! Form::open() !!} {{-- Blade shortcut for creating HTML5 form --}}
 			<div class="form-group"> {{-- Group related form components together --}}
-				{!! Form::label('name', 'What is your name:', ['class' => 'control-label']) !!}
-				{!! Form::text('name', null, ['class' => 'form-control']) !!}
+				{!! Form::label('nickname', 'Nick name:', ['class' => 'control-label']) !!}
+				{!! Form::text('nickname', null, ['class' => 'form-control']) !!}
 			</div>
 			<div class="form-group">
-				{!! Form::label('mcq', 'What is your answer:', ['class' => 'control-label']) !!}
-				{!! Form::radio('mcq', '9', false, ['class' => 'form-control']) !!}A.9
-				{!! Form::radio('mcq', '10', false, ['class' => 'form-control']) !!}B.10
-				{!! Form::radio('mcq', '11', false, ['class' => 'form-control']) !!}C.11
+				{!! Form::label('fullname', 'Full name:', ['class' => 'control-label']) !!}
+				{!! Form::text('fullname', null, ['class' => 'form-control']) !!}
 			</div>
 			<div class="form-group">
-			{!! Form::select('size', ['SN' => 'Select Nationality', 'SGP' => 'SGP - Singaporean', 'CHN' => 'CHN - Chinese', 'VNM' => 'VNM - Vietnamese', 'IDN' => 'IDN - Indonesian', 'OTH' => 'OTH - Other Nationality'], 'Select Nationality') !!}
+				{!! Form::label('kattisacct', 'Kattis account:', ['class' => 'control-label']) !!}
+				{!! Form::text('kattisacct', null, ['class' => 'form-control']) !!}
+			</div>
+			<div class="form-group">
+			{!! Form::label('nationality', 'Nationality:', ['class' => 'control-label']) !!}
+			{!! Form::select('nationality', ['SN' => 'Select Nationality', 'SGP' => 'SGP - Singaporean', 'CHN' => 'CHN - Chinese', 'VNM' => 'VNM - Vietnamese', 'IDN' => 'IDN - Indonesian', 'OTH' => 'OTH - Other Nationality'], 'Select Nationality') !!}
 			</div>
 			<div class="form-group"> {{-- Don't forget to create a submit button --}}
 				{!! Form::submit('Submit', ['class' => 'form-control']) !!}

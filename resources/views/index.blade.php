@@ -21,7 +21,6 @@ Home
 	foreach($sums as $sum){
 
 		if($sums[$i] == $first){
-			echo $sums[$i];
 			unset($sums[$i]);
 		}
 	$i++;

@@ -23,6 +23,7 @@
               @if(Request::is('student/*/edit')) @else <li><a href="edit">Edit Mode</a></li>@endif
               @if(Request::is('student/*/upload')) @else <li><a href="upload">Upload Mode</a></li>@endif
               <li><a href=".">Detail Mode</a></li>
+              <li><a href="/student/create">Create Mode</a></li>
             </ul>
           </li>
           @elseif(Request::is('student/*'))
@@ -31,6 +32,7 @@
             <ul class="dropdown-menu">
               <li><a href="/{{Request::path()}}/edit">Edit Mode</a></li>
               <li><a href="/{{Request::path()}}/upload">Upload Mode</a></li>
+              <li><a href="/student/create">Create Mode</a></li>
             </ul>
           </li>
           @else

@@ -15,7 +15,7 @@ Route::get('student/create', function() { return view('create'); });
 Route::get('student/{id}', 'StudentController@detail');
 Route::get('help', function() { return view('help'); });
 Route::get('student/{id}/upload', 'UploadController@upload');
-Route::post('student/{id}/upload', 'UploadController@store');
+Route::post('student/upload', 'UploadController@store');
 Route::get('student/{id}/edit', 'EditController@edit');
 Route::post('student/{id}/edit', 'EditController@store');
 Route::get('test', function(){ return View::make('test');});

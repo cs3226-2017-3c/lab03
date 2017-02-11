@@ -12,8 +12,8 @@
   		</div>
   		<div id="navbar" class="navbar-collapse collapse">
   			<ul class="nav navbar-nav">
-  				<li id="home" class="active"><a href="/">Home</a></li>
-  				<li id="help"><a href="/help">Help</a></li>
+  				<li id="home" class="{{ Request::is('/') ? 'active' : '' }}"><a href="/">Home</a></li>
+  				<li id="help" class="{{ Request::is('help') ? 'active' : '' }}><a href="/help">Help</a></li>
   			</ul>
   		</div><!--/.nav-collapse -->
   	</div><!--/.container-fluid -->

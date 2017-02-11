@@ -52,7 +52,7 @@ Home
 	$highest = [0,0,0,0,0,0,0,0];
 	for($i=0;$i<$noofcategories;$i++){
 		foreach ($student as $s) {
-			switch ($i{
+			switch ($i){
 				case "0":
 					if($s->mc > $highest[$i]){
 						$highest[$i] = $s->mc;

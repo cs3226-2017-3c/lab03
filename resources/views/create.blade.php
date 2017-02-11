@@ -24,7 +24,7 @@ Create Student
 			{!! Form::select('nationality', ['SN' => 'Select Nationality', 'SGP' => 'SGP - Singaporean', 'CHN' => 'CHN - Chinese', 'VNM' => 'VNM - Vietnamese', 'IDN' => 'IDN - Indonesian', 'OTH' => 'OTH - Other Nationality'], 'Select Nationality') !!}
 			</div>
 			<div class="form-group"> {{-- Don't forget to create a submit button --}}
-				{!! Form::submit('Submit', ['class' => 'form-control']) !!}
+				{!! Form::submit('Create', ['class' => 'form-control']) !!}
 			</div>
 			@if (count($errors) > 0) {{-- just list down all errors found --}}
 				<div class="alert alert-danger">

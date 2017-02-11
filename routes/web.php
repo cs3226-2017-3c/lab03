@@ -19,7 +19,11 @@ Route::post('student/{id}/upload', 'UploadController@store');
 Route::get('student/{id}/edit', 'EditController@edit');
 Route::post('student/{id}/edit', 'EditController@store');
 
+<<<<<<< HEAD
 Route::get('test', 'FormController@test');
 Route::post('test', 'FormController@check'); // notice the POST method
 
 Route::get('*', function() { return view('404'); });
+=======
+Route::get('test', function(){ return View::make('test');});
+>>>>>>> 15289981afb3351359d1b32105ee075f16718487

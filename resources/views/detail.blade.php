@@ -46,7 +46,7 @@
       options: {
         scale: {
           ticks: {
-              beginAtZero: true
+              min: 0
           },
         }
       }

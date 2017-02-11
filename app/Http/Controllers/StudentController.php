@@ -27,4 +27,17 @@ class StudentController extends Controller
             return view('detail',['student' => $student->first()]);
         }
     }
+
+    public function upload($id) {
+        $student = DB::table('student')->where('id', $id)->get();
+        if ($student->isEmpty()){
+            return view('404');
+        } else {
+            return view('upload',['student' => $student->first()]);
+        }
+    }    
+
+    public function upload_image($id) {
+        //
+    }      
 }

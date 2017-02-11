@@ -30,7 +30,7 @@
       type: 'radar',
       data: {
         labels: ["MC", "TC", "HW", "Bs", "KS", "Ac"],
-        datasets: [
+        datasets: 
         {
           label: "{{$student->name}}",
           backgroundColor: "rgba(179,181,198,0.2)",
@@ -41,8 +41,7 @@
           pointHoverBorderColor: "rgba(179,181,198,1)",
           data: [{{$student->mc}},{{$student->tc}},{{$student->hw}},{{$student->bs}},{{$student->ks}},{{$student->ac}}]
         },
-        ],
-      }
+      },
       options: {
         scale: {
           ticks: {

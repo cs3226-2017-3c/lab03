@@ -43,6 +43,9 @@ Home
 
 	$third = $sums[0];
 
+?>
+
+<?php
 	echo $first;
 
 	echo $second;

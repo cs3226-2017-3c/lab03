@@ -41,6 +41,6 @@ class StudentController extends Controller
     public function upload_image(Request $request) {
         $path = $request->file('avatar')->store('public/avatar');
         $id = $request->text('id');
-        return $path, $id;
+        return $path;
     }      
 }

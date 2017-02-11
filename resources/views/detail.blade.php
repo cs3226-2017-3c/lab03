@@ -23,15 +23,15 @@
   </div>
   
   @endsection
-@section('footer')
+  @section('footer')
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <script>
-  var ctx = document.getElementById("myChart");
-  var myChart = new Chart(ctx, {
-    type: 'radar',
-    data: {
-      labels: ["MC", "TC", "HW", "Bs", "KS", "Ac"],
-      datasets: [
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: ["MC", "TC", "HW", "Bs", "KS", "Ac"],
+        datasets: [
         {
           label: "{{$student->name}}",
           backgroundColor: "rgba(179,181,198,0.2)",
@@ -42,15 +42,16 @@
           pointHoverBorderColor: "rgba(179,181,198,1)",
           data: [{{$student->mc}},{{$student->tc}},{{$student->hw}},{{$student->bs}},{{$student->ks}},{{$student->ac}}]
         },
-      ],
+        ],
+      }
       options: {
         scale: {
           ticks: {
-              min: 0
+            min: 0,
+            max: 9,
           },
-        }
-      }
-    }
-  });
+        },
+      },
+    });
   </script>
-@endsection
+  @endsection

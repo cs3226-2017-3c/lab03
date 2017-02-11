@@ -12,7 +12,7 @@ Home
 		$sums[$i] = $sum;
 		$i = $i+1;
 	}
-	$sums.arsort();
+	arsort($sums);
 	echo $sums[count($sums)];
 ?>
 <div class="container-fluid">

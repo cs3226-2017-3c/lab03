@@ -99,7 +99,6 @@ Home
 
 		}
 	}
-	var_dump($highest);
 
 ?>
 
@@ -140,49 +139,49 @@ Home
 						<td class="hidden-xs"><span class="flag-icon flag-icon-{{strtolower($s->country)}}"></span>{{$s->country}}</td>
 						<td><img class="hidden-xs" alt="" src="img/prof.png" height="15"><a href="student/{{$s->id}}">{{$s->name}}</a></td>
 					@if($s->mc == $highest["mc"])
-					<td class="hidden-xs" id ="highestmc">{{$s->mc}}</td>
+					<td class="tobeorange">{{$s->mc}}</td>
 					@else
 					<td class="hidden-xs">{{$s->mc}}</td>
 					@endif
 					
 					@if($s->tc==$highest["tc"])
-					<td class="hidden-xs" id="highesttc">{{$s->tc}}</td>
+					<td class="tobeorange">{{$s->tc}}</td>
 					@else
 					<td class="hidden-xs">{{$s->tc}}</td>
 					@endif	
 					
 					@if($s->hw==$highest["hw"])
-					<td class="hidden-xs" id="highesthw">{{$s->hw}}</td>
+					<td class="tobeorange">{{$s->hw}}</td>
 					@else
 					<td class="hidden-xs">{{$s->hw}}</td>
 					@endif							
 					
 					@if($s->mc+$s->tc==$highest["mctc"])
-					<td class="hidden-xs" id="highestmctc">{{$s->mc+$s->tc}}</td>
+					<td class="tobeorange">{{$s->mc+$s->tc}}</td>
 					@else
 					<td class="hidden-xs">{{$s->mc+$s->tc}}</td>
 					@endif
 					
 					@if($s->bs==$highest["bs"])
-					<td class="hidden-xs" id="highestbs">{{$s->bs}}</td>
+					<td class="tobeorange">{{$s->bs}}</td>
 					@else
 					<td class="hidden-xs">{{$s->bs}}</td>
 					@endif		
 
 					@if($s->ks==$highest["ks"])
-					<td class="hidden-xs" id="highestks">{{$s->ks}}</td>
+					<td class="tobeorange">{{$s->ks}}</td>
 					@else
 					<td class="hidden-xs">{{$s->ks}}</td>
 					@endif	
 					
 					@if($s->ac==$highest["ac"])
-					<td class="hidden-xs" id="highestac">{{$s->ac}}</td>
+					<td class="tobeorange">{{$s->ac}}</td>
 					@else
 					<td class="hidden-xs">{{$s->ac}}</td>
 					@endif	
 					
 					@if($s->hw+$s->bs+$s->ks+$s->ac==$highest["hwbsksac"])
-					<td class="hidden-xs" id="highesthwbsksac">{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
+					<td class="tobeorange">{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
 					@else
 					<td class="hidden-xs">{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
 					@endif					

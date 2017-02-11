@@ -28,6 +28,7 @@ function setAllDifferentHeight()
 
 function highlight()
 {
+    //gold silver bronze
 
     var firsts = document.getElementsByClassName("first");
     for(var i=0; i<firsts.length; i++){
@@ -46,5 +47,10 @@ function highlight()
         lasts[i].style.backgroundColor = "pink";
     }
 
+    //orange for max cells
+
+    document.getElementById("")
+
 }
+
 

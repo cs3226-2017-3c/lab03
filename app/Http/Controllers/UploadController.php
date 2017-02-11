@@ -22,6 +22,7 @@ class UploadController extends Controller
         Validator::make($request->all(), [
             'avatar' => 'required|max:1024|mimetypes:image/jpeg,image/bmp,image/gif',
             'id' => 'required|exists:student,id',
+            'g-recaptcha-response' => 'required|captcha',
         ])->validate();
 
         $path = $request->file('avatar')->store("public/avatar");

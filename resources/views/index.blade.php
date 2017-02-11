@@ -48,49 +48,49 @@ Home
 
 //Determining highest value for each category
 	$noofcategories = 8;
-	$categories = ["mc", "tc", "mctc", "hw", "bs", "ks", "ac", "$s->hw+$s->bs+$s->ks+$s->ac"];
-	$highest = [0,0,0,0,0,0,0,0];
+	$categories = ["mc", "tc", "mctc", "hw", "bs", "ks", "ac", "hwbsksac"];
+	$highest = ["mc"=>0,"tc"=>0,"mctc"=>0,"hw"=>0,"bs"=>0,"ks"=>0,"ac"=>0,"hwbsksac"=>0];
 	for($i=0;$i<$noofcategories;$i++){
 		foreach ($student as $s) {
 			switch ($i){
 				case "0":
-					if($s->mc > $highest[$i]){
-						$highest[$i] = $s->mc;
+					if($s->mc > $highest["mc"]){
+						$highest["mc"] = $s->mc;
 					}
 					break;
 				case "1":
-					if($s->tc > $highest[$i]){
-						$highest[$i] = $s->tc;
+					if($s->tc > $highest["tc"]){
+						$highest["tc"] = $s->tc;
 					}
 					break;
 				case "2":
-					if($s->tc+$s->mc > $highest[$i]){
-						$highest[$i] = $s->tc+$s->mc;
+					if($s->tc+$s->mc > $highest["mctc"]){
+						$highest["mctc"] = $s->tc+$s->mc;
 					}
 					break;
 				case "3":
-					if($s->hw > $highest[$i]){
-						$highest[$i] = $s->hw;
+					if($s->hw > $highest["hw"]){
+						$highest["hw"] = $s->hw;
 					}	
 					break;	
 				case "4":
-					if($s->bs > $highest[$i]){
-						$highest[$i] = $s->bs;
+					if($s->bs > $highest["bs"]){
+						$highest["bs"] = $s->bs;
 					}	
 					break;		
 				case "5":
-					if($s->ks > $highest[$i]){
-						$highest[$i] = $s->ks;
+					if($s->ks > $highest["ks"]){
+						$highest["ks"] = $s->ks;
 					}	
 					break;
 				case "6":
-					if($s->ac > $highest[$i]){
-						$highest[$i] = $s->ac;
+					if($s->ac > $highest["ac"]){
+						$highest["ac"] = $s->ac;
 					}
 					break;		
 				case "7":
-					if($s->hw+$s->bs+$s->ks+$s->ac > $highest[$i]){
-						$highest[$i] = $s->hw+$s->bs+$s->ks+$s->ac;
+					if($s->hw+$s->bs+$s->ks+$s->ac > $highest["hwbsksac"]){
+						$highest["hwbsksac"] = $s->hw+$s->bs+$s->ks+$s->ac;
 					}	
 					break;	
 					
@@ -126,7 +126,6 @@ Home
 				<tbody>
 					@foreach($student as $s)
 					<?php $sum = $s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac; ?>
-
 					@if($sum == $first)
 					<tr class = "first">
 					@elseif($sum == $second)
@@ -140,14 +139,54 @@ Home
 						<td>{{$loop->iteration}}</td>
 						<td class="hidden-xs"><span class="flag-icon flag-icon-{{strtolower($s->country)}}"></span>{{$s->country}}</td>
 						<td><img class="hidden-xs" alt="" src="img/prof.png" height="15"><a href="student/{{$s->id}}">{{$s->name}}</a></td>
-						<td class="hidden-xs">{{$s->mc}}</td>
-						<td class="hidden-xs">{{$s->tc}}</td>
-						<td>{{$s->mc+$s->tc}}</td>
-						<td class="hidden-xs">{{$s->hw}}</td>
-						<td class="hidden-xs">{{$s->bs}}</td>
-						<td class="hidden-xs">{{$s->ks}}</td>
-						<td class="hidden-xs">{{$s->ac}}</td>
-						<td>{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
+					@if($s->mc == $highest["mc"])
+					<td class="hidden-xs" id ="highestmc">{{$s->mc}}</td>
+					@else
+					<td class="hidden-xs">{{$s->mc}}</td>
+					@endif
+					
+					@if($s->tc==$highest["tc"])
+					<td class="hidden-xs" id="highesttc">{{$s->tc}}</td>
+					@else
+					<td class="hidden-xs">{{$s->tc}}</td>
+					@endif	
+					
+					@if($s->hw==$highest["hw"])
+					<td class="hidden-xs" id="highesthw">{{$s->hw}}</td>
+					@else
+					<td class="hidden-xs">{{$s->hw}}</td>
+					@endif							
+					
+					@if($s->mc+$s->tc==$highest["mctc"])
+					<td class="hidden-xs" id="highestmctc">{{$s->mc+$s->tc}}</td>
+					@else
+					<td class="hidden-xs">{{$s->mc+$s->tc}}</td>
+					@endif
+					
+					@if($s->bs==$highest["bs"])
+					<td class="hidden-xs" id="highestbs">{{$s->bs}}</td>
+					@else
+					<td class="hidden-xs">{{$s->bs}}</td>
+					@endif		
+
+					@if($s->ks==$highest["ks"])
+					<td class="hidden-xs" id="highestks">{{$s->ks}}</td>
+					@else
+					<td class="hidden-xs">{{$s->ks}}</td>
+					@endif	
+					
+					@if($s->ac==$highest["ac"])
+					<td class="hidden-xs" id="highestac">{{$s->ac}}</td>
+					@else
+					<td class="hidden-xs">{{$s->ac}}</td>
+					@endif	
+					
+					@if($s->hw+$s->bs+$s->ks+$s->ac==$highest["hwbsksac"])
+					<td class="hidden-xs" id="highesthwbsksac">{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
+					@else
+					<td class="hidden-xs">{{$s->hw+$s->bs+$s->ks+$s->ac}}</td>
+					@endif					
+						
 						<td class ="sum">{{$s->mc+$s->tc+$s->hw+$s->bs+$s->ks+$s->ac}}</td>
 					</tr>
 					@endforeach

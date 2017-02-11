@@ -7,12 +7,13 @@
   <div class="row">
     <div class="col-md-12" >
         <h2>Upload image for <strong>{{ $student->name }}</strong></h2>
-        {!! Form::open(['action' => ['StudentController@upload_image', $student->id],'files' => 'true']) !!}
+        {!! Form::open(['action' => 'StudentController@upload_image','files' => 'true']) !!}
         <div class="form-group">
+          {!! Form::file('avatar') !!}
           {!! Form::file('avatar') !!}
         </div>
         <div class="form-group"> 
-          {!! Form::submit('Submit', ['class' => 'btn btn-primary btn-lg']) !!}
+          {!! Form::text('id', '{{$student->id}}',['type' => 'hidden']) !!}
         </div>
         {!! Form::close() !!}
       </div>

@@ -18,6 +18,33 @@ class EditController extends Controller
     } 
 
     public function store(Request $request) {
+		Validator::make($request->all(), [ // as simple as this
+			'nickname' => 'required|min:5|max:30',
+			'fullname' => 'required|min:5|max:30',
+			'kattisacct' => 'required|min:5|max:30',
+			'mc' => 'required|regex:.[0-9]',
+			'tc' => 'required|regex:.[0-9]',
+			'hw' => 'required|regex:.[0-9]',
+			'bs' => 'required|regex:.[0-9]',
+			'ks' => 'required|regex:.[0-9]',
+			'ac' => 'required|regex:.[0-9]',
+		])->validate();
 	
+		$nickname = $request->input('nickname');
+		$fullname = $request->input('fullname');
+		$kattisacct = $request->input('kattisacct');
+		$mc = $request->input('mc');
+		$tc = $request->input('tc');
+		$hw = $request->input('hw');
+		$bs = $request->input('bs');
+		$ks = $request->input('ks');
+		$ac = $request->input('ac');
+		$comment = $request->input('comment');
+		DB::table('student')->insert(
+			['name' => $fullname, 'nickname' => $nickname, 'kattis' => $kattisacct,
+			'mc' => $mc, 'tc' => $tc, 'hw' => $hw, 'bs' => $bs,
+			'ks' => $ks, 'ac' => $ac, 'comment' => $comment]);
+		
+		return redirect()->action('StudentController@index');
     }      
 }

@@ -34,7 +34,9 @@ class StudentsTableSeeder extends Seeder
 
     private function generate_mc()
     {
-        $min, $max, $n  = 0, 4, 9;
+        $min = 0;
+        $max = 4;
+        $n = 9;
         $arr = [];
         for ($i=0;$i<$n;$i++){
             $arr[] = $faker->numberBetween($min*2, $max*2)/2;
@@ -44,8 +46,10 @@ class StudentsTableSeeder extends Seeder
 
     private function generate_tc()
     {
-        $x_min, $x_max  = 0, 10.5;
-        $y_min, $y_max  = 0, 13.5;
+        $x_min = 0;
+        $x_max = 10.5;
+        $y_min = 0;
+        $y_max  = 13.5;
         $arr = [];
         $arr[] = $faker->numberBetween($x_min*2, $x_max*2)/2;
         $arr[] = $faker->numberBetween($y_min*2, $y_max*2)/2;
@@ -53,7 +57,9 @@ class StudentsTableSeeder extends Seeder
     }
     private function generate_hw()
     {
-        $min, $max, $n  = 0, 1.5, 10;
+        $min = 0;
+        $max = 1.5;
+        $n = 10;
         $arr = [];
         for ($i=0;$i<$n;$i++){
             $arr[] = $faker->numberBetween($min*2, $max*2)/2;
@@ -62,7 +68,9 @@ class StudentsTableSeeder extends Seeder
     }
     private function generate_bs()
     {
-        $min, $max, $n  = 0, 1, 9;
+        $min = 0;
+        $max = 1;
+        $n = 9;
         $arr = [];
         for ($i=0;$i<$n;$i++){
             $arr[] = $faker->numberBetween($min, $max);
@@ -71,7 +79,9 @@ class StudentsTableSeeder extends Seeder
     }
     private function generate_ks()
     {
-        $min, $max, $n  = 0, 1, 12;
+        $min = 0;
+        $max = 1;
+        $n = 12;
         $arr = [];
         for ($i=0;$i<$n;$i++){
             $arr[] = $faker->numberBetween($min, $max);
@@ -80,9 +90,12 @@ class StudentsTableSeeder extends Seeder
     }
     private function generate_ac()
     {
-        $x_min, $x_max,  = 0, 1;
-        $y_min, $y_max,  = 0, 3;
-        $z_min, $z_max,  = 0, 6;
+        $x_min = 0;
+        $x_max = 1;
+        $y_min = 0;
+        $y_max = 3;
+        $z_min = 0;
+        $z_max = 6;
         $arr = [];
         $arr[] = $faker->numberBetween($x_min, $x_max);
         $arr[] = $faker->numberBetween($x_min, $x_max);

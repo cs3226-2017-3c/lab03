@@ -1,4 +1,14 @@
 $(function(){
+    sum();
+    $('input[name="mc"]').change(sum());
+    $('input[name="tc"]').change(sum());
+    $('input[name="hw"]').change(sum());
+    $('input[name="bs"]').change(sum());
+    $('input[name="ks"]').change(sum());
+    $('input[name="ac"]').change(sum());
+})
+
+function sum(){
     $('input[name="sum"]').attr('disabled','disabled');
 
     var s = [];
@@ -13,5 +23,5 @@ $(function(){
        return pv + (parseFloat(cv)||0);
     },0);
 
-    $('input[name="sum"]').val(sum);
-})
+    $('input[name="sum"]').val(sum);    
+}

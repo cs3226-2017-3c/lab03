@@ -19,14 +19,14 @@ class Student extends Migration
             $table->string('nickname');
             $table->string('kattis');
             $table->string('country');
-            $table->string('mc');
-            $table->string('tc');
-            $table->string('hw');
-            $table->string('bs');
-            $table->string('ks');
-            $table->string('ac');  
+            $table->string('mc')->default('x,x,x,x,x,x,x,x,x');
+            $table->string('tc')->default('x,x');
+            $table->string('hw')->default('x,x,x,x,x,x,x,x,x,x');
+            $table->string('bs')->default('x,x,x,x,x,x,x,x,x');
+            $table->string('ks')->default('x,x,x,x,x,x,x,x,x,x,x');
+            $table->string('ac')->default('x,x,x,x,x,x,x,x');  
             $table->string('avatar')->nullable();
-            $table->string('comment');            
+            $table->string('comment')->nullable();            
             $table->timestamps();
         });
     }

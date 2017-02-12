@@ -39,8 +39,8 @@ class StudentsTableSeeder extends Seeder
         $max = 4;
         $n = 9;
         $arr = [];
+        $z = min($faker->randomDigit, $n);
         for ($i=0;$i<$n;$i++){
-            $z = min($faker->randomDigit, $n);
             if($i > $z){
                 $arr[] = 'x';
             } else {
@@ -69,8 +69,8 @@ class StudentsTableSeeder extends Seeder
         $max = 1.5;
         $n = 10;
         $arr = [];
+        $z = min($faker->randomDigit, $n);
         for ($i=0;$i<$n;$i++){
-            $z = min($faker->randomDigit, $n);
             if($i > $z){
                 $arr[] = 'x';
             } else {
@@ -86,8 +86,8 @@ class StudentsTableSeeder extends Seeder
         $max = 1;
         $n = 9;
         $arr = [];
+        $z = min($faker->randomDigit, $n);
         for ($i=0;$i<$n;$i++){
-            $z = min($faker->randomDigit, $n);
             if($i > $z){
                 $arr[] = 'x';
             } else {
@@ -103,8 +103,8 @@ class StudentsTableSeeder extends Seeder
         $max = 1;
         $n = 12;
         $arr = [];
+        $z = min($faker->randomDigit, $n);
         for ($i=0;$i<$n;$i++){
-            $z = min($faker->randomDigit, $n);
             if($i > $z){
                 $arr[] = 'x';
             } else {

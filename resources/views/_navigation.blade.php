@@ -24,6 +24,7 @@
               @if(Request::is('student/*/upload')) @else <li><a href="upload">Upload Mode</a></li>@endif
               @if(Request::is('student/*/delete')) @else <li><a href="delete">Delete Mode</a></li>@endif
               <li><a href=".">Detail Mode</a></li>
+              <li role="separator" class="divider"></li>
               <li><a href="/student/create">Create Mode</a></li>
             </ul>
           </li>

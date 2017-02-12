@@ -40,7 +40,12 @@ class StudentsTableSeeder extends Seeder
         $n = 9;
         $arr = [];
         for ($i=0;$i<$n;$i++){
-            $arr[] = $faker->numberBetween($min*2, $max*2)/2;
+            $z = min($faker->randomDigit, $n);
+            if($i > $z){
+                $arr[] = 'x';
+            } else {
+                $arr[] = $faker->numberBetween($min*2, $max*2)/2;
+            }
         }
         return implode(",", $arr);
     }
@@ -65,7 +70,12 @@ class StudentsTableSeeder extends Seeder
         $n = 10;
         $arr = [];
         for ($i=0;$i<$n;$i++){
-            $arr[] = $faker->numberBetween($min*2, $max*2)/2;
+            $z = min($faker->randomDigit, $n);
+            if($i > $z){
+                $arr[] = 'x';
+            } else {
+                $arr[] = $faker->numberBetween($min*2, $max*2)/2;
+            }
         }
         return implode(",", $arr);
     }
@@ -77,7 +87,12 @@ class StudentsTableSeeder extends Seeder
         $n = 9;
         $arr = [];
         for ($i=0;$i<$n;$i++){
-            $arr[] = $faker->numberBetween($min, $max);
+            $z = min($faker->randomDigit, $n);
+            if($i > $z){
+                $arr[] = 'x';
+            } else {
+                $arr[] = $faker->numberBetween($min, $max);
+            }
         }
         return implode(",", $arr);
     }
@@ -89,7 +104,12 @@ class StudentsTableSeeder extends Seeder
         $n = 12;
         $arr = [];
         for ($i=0;$i<$n;$i++){
-            $arr[] = $faker->numberBetween($min, $max);
+            $z = min($faker->randomDigit, $n);
+            if($i > $z){
+                $arr[] = 'x';
+            } else {
+                $arr[] = $faker->numberBetween($min, $max);
+            }
         }
         return implode(",", $arr);
     }

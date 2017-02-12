@@ -146,6 +146,7 @@
           ticks: {
             min: 0,
             max: 1,
+            maxTicksLimit: 6,
           }
         }
       }

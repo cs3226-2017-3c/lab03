@@ -15,12 +15,18 @@ class StudentController extends Controller
      */
     public function index() { 
         $students = DB::table('student')->get()->map(function ($value, $key) {
-            // $arr = array('mc','tc','hw','bs','ks','ac');
-            echo sum_score($value->mc);
+            $arr = array('mc','tc','hw','bs','ks','ac');
+            foreach ($arr as $column) {
+                $value->{$column+'_i'} = $object->{$column};
+                $value->{$column} = sum_score($value->$arr);
+            }
             return $value;
-        })->sortByDesc(function ($a, $key) {
+        });
+        /**
+        ->sortByDesc(function ($a, $key) {
             return  $a->mc+$a->tc+$a->hw+$a->bs+$a->ks+$a->ac ;
         });
+        */
         return view('index', ['student' => $students]); 
     } 
 

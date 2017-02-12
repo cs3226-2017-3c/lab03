@@ -51,7 +51,7 @@ class StudentController extends Controller
         if (! $student){
             return view('404');
         } else {
-            return view('detail',['student' => $student->first(), 'leader' => $leader]);
+            return view('detail',['student' => $student, 'leader' => $leader]);
         }
     }
 

@@ -22,7 +22,7 @@ class StudentController extends Controller
             }
             $value->spe = $value->mc+$value->tc;
             $value->dil = $value->hw+$value->bs+$value->ks+$value->ac;
-            $value->sum->dil = $value->spe + $value->dil;
+            $value->sum = $value->spe + $value->dil;
             return $value;
         })->sortByDesc(function ($a, $key) {
             return $a->sum;

@@ -21,11 +21,39 @@
 			{!! Form::text('kattisacct', null, ['class' => 'form-control']) !!}
 		</div>
 		<div class="form-group">
-			{!! Form::label('nationality', 'Nationality:', ['class' => 'control-label']) !!}
-			{!! Form::select('nationality', ['' => 'Select Nationality', 'SGP' => 'SGP - Singaporean', 'CHN' => 'CHN - Chinese', 'VNM' => 'VNM - Vietnamese', 'IDN' => 'IDN - Indonesian', 'OTH' => 'OTH - Other Nationality'], 'Select Nationality') !!}
+			{!! Form::label('mc', 'Mini contest scores:', ['class' => 'control-label']) !!}
+			{!! Form::text('mc', null, ['class' => 'form-control']) !!}
+		</div>
+		<div class="form-group">
+			{!! Form::label('tc', 'Team contest scores:', ['class' => 'control-label']) !!}
+			{!! Form::text('tc', null, ['class' => 'form-control']) !!}
+		</div>
+		<div class="form-group">
+			{!! Form::label('hw', 'Homework scores:', ['class' => 'control-label']) !!}
+			{!! Form::text('hw', null, ['class' => 'form-control']) !!}
+		</div>
+		<div class="form-group">
+			{!! Form::label('bs', 'Problem B scores:', ['class' => 'control-label']) !!}
+			{!! Form::text('bs', null, ['class' => 'form-control']) !!}
+		</div>
+		<div class="form-group">
+			{!! Form::label('ks', 'Kattis set scores:', ['class' => 'control-label']) !!}
+			{!! Form::text('ks', null, ['class' => 'form-control']) !!}
+		</div>
+		<div class="form-group">
+			{!! Form::label('ac', 'Achievement scores:', ['class' => 'control-label']) !!}
+			{!! Form::text('ac', null, ['class' => 'form-control']) !!}
+		</div>
+		<div class="form-group">
+			{!! Form::label('sum', 'Sum of scores:', ['class' => 'control-label']) !!}
+			{!! Form::text('sum', null, ['class' => 'form-control']) !!}
+		</div>
+		<div class="form-group">
+			{!! Form::label('comment', 'Specific comments:', ['class' => 'control-label']) !!}
+			{!! Form::text('comment', null, ['class' => 'form-control']) !!}
 		</div>
 		<div class="form-group"> {{-- Don't forget to create a submit button --}}
-			{!! Form::submit('Create', ['class' => 'form-control']) !!}
+			{!! Form::submit('Update', ['class' => 'form-control']) !!}
 		</div>
       @if (count($errors) > 0)
         <div class="alert alert-danger">

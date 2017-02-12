@@ -35,6 +35,7 @@
               <li><a href="/{{Request::path()}}/edit">Edit Mode</a></li>
               <li><a href="/{{Request::path()}}/upload">Upload Mode</a></li>
               <li><a href="/{{Request::path()}}/delete">Delete Mode</a></li>
+              <li role="separator" class="divider"></li>
               <li><a href="/student/create">Create Mode</a></li>
             </ul>
           </li>

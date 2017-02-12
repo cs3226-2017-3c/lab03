@@ -14,35 +14,35 @@
 		</div>
 		<div class="form-group">
 			{!! Form::label('fullname', 'Full name:', ['class' => 'control-label']) !!}
-			{!! Form::text('fullname', null, ['class' => 'form-control']) !!}
+			{!! Form::text('fullname', $student->name, ['class' => 'form-control']) !!}
 		</div>
 		<div class="form-group">
 			{!! Form::label('kattisacct', 'Kattis account:', ['class' => 'control-label']) !!}
-			{!! Form::text('kattisacct', null, ['class' => 'form-control']) !!}
+			{!! Form::text('kattisacct', $student->kattis, ['class' => 'form-control']) !!}
 		</div>
 		<div class="form-group">
 			{!! Form::label('mc', 'Mini contest scores:', ['class' => 'control-label']) !!}
-			{!! Form::text('mc', '', ['class' => 'form-control']) !!}
+			{!! Form::text('mc', $student->mc, ['class' => 'form-control']) !!}
 		</div>
 		<div class="form-group">
 			{!! Form::label('tc', 'Team contest scores:', ['class' => 'control-label']) !!}
-			{!! Form::text('tc', null, ['class' => 'form-control']) !!}
+			{!! Form::text('tc', $student->tc, ['class' => 'form-control']) !!}
 		</div>
 		<div class="form-group">
 			{!! Form::label('hw', 'Homework scores:', ['class' => 'control-label']) !!}
-			{!! Form::text('hw', null, ['class' => 'form-control']) !!}
+			{!! Form::text('hw', $student->hw, ['class' => 'form-control']) !!}
 		</div>
 		<div class="form-group">
 			{!! Form::label('bs', 'Problem B scores:', ['class' => 'control-label']) !!}
-			{!! Form::text('bs', null, ['class' => 'form-control']) !!}
+			{!! Form::text('bs', $student->bs, ['class' => 'form-control']) !!}
 		</div>
 		<div class="form-group">
 			{!! Form::label('ks', 'Kattis set scores:', ['class' => 'control-label']) !!}
-			{!! Form::text('ks', null, ['class' => 'form-control']) !!}
+			{!! Form::text('ks', $student->ks, ['class' => 'form-control']) !!}
 		</div>
 		<div class="form-group">
 			{!! Form::label('ac', 'Achievement scores:', ['class' => 'control-label']) !!}
-			{!! Form::text('ac', null, ['class' => 'form-control']) !!}
+			{!! Form::text('ac', $student->ac, ['class' => 'form-control']) !!}
 		</div>
 		<div class="form-group">
 			{!! Form::label('sum', 'Sum of scores:', ['class' => 'control-label']) !!}
@@ -50,7 +50,7 @@
 		</div>
 		<div class="form-group">
 			{!! Form::label('comment', 'Specific comments:', ['class' => 'control-label']) !!}
-			{!! Form::text('comment', null, ['class' => 'form-control']) !!}
+			{!! Form::text('comment', $student->comment, ['class' => 'form-control']) !!}
 		</div>
 		<div class="form-group"> {{-- Don't forget to create a submit button --}}
 			{!! Form::submit('Update', ['class' => 'form-control']) !!}

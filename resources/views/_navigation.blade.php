@@ -15,7 +15,7 @@
   				<li id="home" @if(Request::path()=="/")class="active"@endif}}><a href="/">Home</a></li>
   				<li id="help" @if(Request::is('help'))class="active"@endif}}><a href="/help">Help</a></li>
           @if(Request::is('student/create'))
-          <li id="create-mode" class="active">Create Mode</li>
+          <li id="create-mode" class="active"><a>Create Mode</a></li>
           @elseif(Request::is('student/*/*'))
           <li class="dropdown active">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@if(Request::is('student/*/edit')) Edit Mode @elseif(Request::is('student/*/upload')) Upload Mode @elseif(Request::is('student/*/delete')) Delete Mode  @else @endif <span class="caret"></span></a>

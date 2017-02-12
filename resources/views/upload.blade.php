@@ -25,7 +25,7 @@
           {!! Form::hidden('id', $student->id) !!}
         </div>
         <div class="form-group"> 
-          {!! Form::submit('Upload', ['class' => 'btn btn-primary btn-lg' btn-block]) !!}
+          {!! Form::submit('Upload', ['class' => 'btn btn-primary btn-lg btn-block']) !!}
         </div>
         {!! Form::close() !!}
       </div>

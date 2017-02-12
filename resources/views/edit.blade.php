@@ -50,12 +50,16 @@
 		</div>
 		<div class="form-group">
 			{!! Form::label('nationality', 'Nationality:', ['class' => 'control-label']) !!}
-			{!! Form::select('nationality', ['' => 'Select Nationality', 'SG' => 'SGP - Singaporean', 'CN' => 'CHN - Chinese', 'VN' => 'VNM - Vietnamese', 'ID' => 'IDN - Indonesian', 'OTH' => 'OTH - Other Nationality'], $student->country) !!}
+			{!! Form::text('nationality', $student->country, ['class' => 'form-control']) !!}
        		</div>
 		<div class="form-group">
 			{!! Form::label('comment', 'Specific comments:', ['class' => 'control-label']) !!}
 			{!! Form::text('comment', $student->comment, ['class' => 'form-control']) !!}
 		</div>
+		<div class="form-group">
+          {!! app('captcha')->display(); !!}
+          {!! Form::hidden('id', $student->id) !!}
+        </div>
 		<div class="form-group"> {{-- Don't forget to create a submit button --}}
 			{!! Form::submit('Update', ['class' => 'form-control']) !!}
 		</div>

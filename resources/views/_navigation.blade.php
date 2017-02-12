@@ -18,10 +18,11 @@
           <li id="create-mode" class="active"><a href="#">Create Mode</a></li>
           @elseif(Request::is('student/*/*'))
           <li class="dropdown active">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@if(Request::is('student/*/edit')) Edit Mode @elseif(Request::is('student/*/upload')) Upload Mode @else @endif <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@if(Request::is('student/*/edit')) Edit Mode @elseif(Request::is('student/*/upload')) Upload Mode @elseif(Request::is('student/*/delete')) Delete Mode  @else @endif <span class="caret"></span></a>
             <ul class="dropdown-menu">
               @if(Request::is('student/*/edit')) @else <li><a href="edit">Edit Mode</a></li>@endif
               @if(Request::is('student/*/upload')) @else <li><a href="upload">Upload Mode</a></li>@endif
+              @if(Request::is('student/*/delete')) @else <li><a href="upload">Delete Mode</a></li>@endif
               <li><a href=".">Detail Mode</a></li>
               <li><a href="/student/create">Create Mode</a></li>
             </ul>
@@ -32,6 +33,7 @@
             <ul class="dropdown-menu">
               <li><a href="/{{Request::path()}}/edit">Edit Mode</a></li>
               <li><a href="/{{Request::path()}}/upload">Upload Mode</a></li>
+              <li><a href="/{{Request::path()}}/delete">Delete Mode</a></li>
               <li><a href="/student/create">Create Mode</a></li>
             </ul>
           </li>

@@ -18,7 +18,7 @@ Route::get('help', function() { return view('help'); });
 Route::get('student/{id}/upload', 'UploadController@upload');
 Route::post('student/upload', 'UploadController@store');
 Route::get('student/{id}/delete', 'DeleteController@delete');
-Route::post('student/{id}/delete', 'DeleteController@store');
+Route::post('student/delete', 'DeleteController@store');
 
 
 Route::get('student/{id}/edit', 'EditController@edit');

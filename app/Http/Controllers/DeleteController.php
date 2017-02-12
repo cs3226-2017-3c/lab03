@@ -32,8 +32,8 @@ class DeleteController extends Controller
         } else {
             DB::table('student')
                 ->where('id', $id)
-                ->update(['avatar' => $path]); 
-            return redirect()->action('StudentController@detail',['id' => $id]);
+                ->delete(); 
+            return redirect()->action('StudentController@index');
         }
     }      
 }

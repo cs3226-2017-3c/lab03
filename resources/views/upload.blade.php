@@ -18,6 +18,7 @@
         <h2>Upload image for <strong>{{ $student->name }}</strong></h2>
         {!! Form::open(['action' => 'UploadController@store', 'files' => 'true']) !!}
         <div class="form-group">
+          {!! Form::label('avatar', 'Avatar:', ['class' => 'control-label']) !!}
           {!! Form::file('avatar') !!}
         </div>
         <div class="form-group">

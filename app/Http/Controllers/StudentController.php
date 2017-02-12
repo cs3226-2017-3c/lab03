@@ -17,8 +17,8 @@ class StudentController extends Controller
         $students = DB::table('student')->get()->map(function ($value, $key) {
             $arr = array('mc','tc','hw','bs','ks','ac');
             foreach ($arr as $column) {
-                $value->{$column.'_i'} = $value->{$column};
-                $value->{$column} = $this->sum_score($value->{$column.'_i'});
+                $value->{$column.'_i'} = explode(",", $value->{$column});
+                $value->{$column} = array_sum($value->{$column.'_i'});
             }
             $value->spe = $value->mc+$value->tc;
             $value->dil = $value->hw+$value->bs+$value->ks+$value->ac;
@@ -30,11 +30,6 @@ class StudentController extends Controller
 
         return view('index', ['student' => $students]); 
     } 
-
-    private function sum_score($score){
-        $arr = explode(",", $score);
-        return array_sum($arr);
-    }
 
     public function detail($id) {
         $leader = DB::table('student')->get()->sortByDesc(function ($a, $key) {

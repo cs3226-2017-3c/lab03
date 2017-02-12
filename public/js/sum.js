@@ -1,24 +1,15 @@
 $(function(){
+    $('input[name="sum"]').attr('disabled','disabled');
     sum();
-    $('input[name="mc"]').change(sum());
-    $('input[name="tc"]').change(sum());
-    $('input[name="hw"]').change(sum());
-    $('input[name="bs"]').change(sum());
-    $('input[name="ks"]').change(sum());
-    $('input[name="ac"]').change(sum());
+    $('input[name="mc"], input[name="tc"], input[name="hw"], input[name="bs"], input[name="ks"], input[name="ac"]').change(function(){sum();});
 })
 
 function sum(){
-    $('input[name="sum"]').attr('disabled','disabled');
-
     var s = [];
-    s = s.concat($('input[name="mc"]').val().split(","));
-    s = s.concat($('input[name="tc"]').val().split(","));
-    s = s.concat($('input[name="hw"]').val().split(","));
-    s = s.concat($('input[name="bs"]').val().split(","));
-    s = s.concat($('input[name="ks"]').val().split(","));
-    s = s.concat($('input[name="ac"]').val().split(","));
-
+    var e = $('input[name="mc"], input[name="tc"], input[name="hw"], input[name="bs"], input[name="ks"], input[name="ac"]');
+    e.each(function(){
+        s = s.concat($(this).val().split(","));
+    });
     var sum = s.reduce((pv,cv)=>{
        return pv + (parseFloat(cv)||0);
     },0);

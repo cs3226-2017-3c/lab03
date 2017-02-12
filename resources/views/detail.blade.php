@@ -127,7 +127,7 @@
             pointBorderColor: "#fff",
             pointHoverBackgroundColor: "#fff",
             pointHoverBorderColor: "rgba(179,181,198,1)",
-            data: [{{$student->mc/36}},{{$student->tc/24}},{{$student->hw/15}},{{$student->bs/9}},{{$student->ks/12}},{{$student->ac/17}}],
+            data: [{{round($student->mc/36,2)}},{{round($student->tc/24,2)}},{{round($student->hw/15,2)}},{{round($student->bs/9,2)}},{{round($student->ks/12,2)}},{{round($student->ac/17,2)}}],
           },
            {
             label: "[Leader] {{$leader->name}}",
@@ -137,7 +137,7 @@
             pointBorderColor: "#fff",
             pointHoverBackgroundColor: "#fff",
             pointHoverBorderColor: "rgba(255,99,132,1)",
-            data: [{{$leader->mc/36}},{{$leader->tc/24}},{{$leader->hw/15}},{{$leader->bs/9}},{{$leader->ks/12}},{{$leader->ac/17}}],
+            data: [{{round($leader->mc/36,2)}},{{round($leader->tc/24,2)}},{{round($leader->hw/15,2)}},{{round($leader->bs/9,2)}},{{round($leader->ks/12,2)}},{{round($leader->ac/17,2)}}],
           },         
         ],
       },

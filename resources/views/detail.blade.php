@@ -43,7 +43,7 @@
             <td>Mini Contests</td>
             <td>{{$student->mc}}</td>
             @foreach($student->mc_i as $mc)
-            <td class="hidden-xs">{{$mc}}</td>
+            <td @if($mc=='x') class="danger hidden-xs" @else class="hidden-xs" @endif>{{$mc}}</td>
             @endforeach
             @for($i = 0; $i < 12 - count($student->mc_i); $i++)
             <td class="hidden-xs"></td>
@@ -53,7 +53,7 @@
             <td>Team Contests</td>
             <td>{{$student->tc}}</td>
             @foreach($student->tc_i as $tc)
-            <td class="hidden-xs">{{$tc}}</td>
+            <td @if($tc=='x') class="danger hidden-xs" @else class="hidden-xs" @endif>{{$tc}}</td>
             @endforeach
             @for($i = 0; $i < 12 - count($student->tc_i); $i++)
             <td class="hidden-xs"></td>
@@ -63,7 +63,7 @@
             <td>Homework</td>
             <td>{{$student->hw}}</td>
             @foreach($student->hw_i as $hw)
-            <td class="hidden-xs">{{$hw}}</td>
+            <td @if($hw=='x') class="danger hidden-xs" @else class="hidden-xs" @endif>{{$hw}}</td>
             @endforeach
             @for($i = 0; $i < 12 - count($student->hw_i); $i++)
             <td class="hidden-xs"></td>
@@ -73,7 +73,7 @@
             <td>Problem Bs</td>
             <td>{{$student->bs}}</td>
             @foreach($student->bs_i as $bs)
-            <td class="hidden-xs">{{$bs}}</td>
+            <td @if($bs=='x') class="danger hidden-xs" @else class="hidden-xs" @endif>{{$bs}}</td>
             @endforeach
             @for($i = 0; $i < 12 - count($student->bs_i); $i++)
             <td class="hidden-xs"></td>
@@ -83,7 +83,7 @@
             <td>Kattis Sets</td>
             <td>{{$student->ks}}</td>
             @foreach($student->ks_i as $ks)
-            <td class="hidden-xs">{{$ks}}</td>
+            <td @if($ks=='x') class="danger hidden-xs" @else class="hidden-xs" @endif>{{$ks}}</td>
             @endforeach
             @for($i = 0; $i < 12 - count($student->ks_i); $i++)
             <td class="hidden-xs"></td>
@@ -93,7 +93,7 @@
             <td>Achievements</td>
             <td>{{$student->ac}}</td>
             @foreach($student->ac_i as $ac)
-            <td class="hidden-xs">{{$ac}}</td>
+            <td @if($ac=='x') class="danger hidden-xs" @else class="hidden-xs" @endif>{{$ac}}</td>
             @endforeach
             @for($i = 0; $i < 12 - count($student->ac_i); $i++)
             <td class="hidden-xs"></td>

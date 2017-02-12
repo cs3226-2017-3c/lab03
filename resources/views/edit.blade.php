@@ -6,6 +6,15 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12" >
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+      @endif
 		<h2>Edit Info for <strong>{{ $student->name }}</strong></h2>
 		{!! Form::open() !!} {{-- Blade shortcut for creating HTML5 form --}}
 		<div class="form-group"> {{-- Group related form components together --}}
@@ -61,17 +70,9 @@
           {!! Form::hidden('id', $student->id) !!}
         </div>
 		<div class="form-group"> {{-- Don't forget to create a submit button --}}
-			{!! Form::submit('Update', ['class' => 'form-control']) !!}
+			{!! Form::submit('Update', ['class' => 'btn btn-danger btn-lg']) !!}
 		</div>
-      @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-      @endif
+      
         
       </div>
     </div>

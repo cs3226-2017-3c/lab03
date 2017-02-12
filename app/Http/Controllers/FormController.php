@@ -25,7 +25,7 @@ class FormController extends Controller {
 	DB::table('student')->insert(
 		['name' => $fullname, 'nickname' => $nickname, 'kattis' => $kattisacct,
 		'country' => $nationality, 'mc' => 0, 'tc' => 0, 'hw' => 0, 'bs' => 0,
-		'ks' => 0, 'ac' => 0]);
+		'ks' => 0, 'ac' => 0, 'comment' => '']);
 		
 	return redirect()->action('StudentController@index');
 	

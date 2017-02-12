@@ -30,7 +30,7 @@ Create Student
 			</div>
 			<div class="form-group">
 			{!! Form::label('nationality', 'Nationality:', ['class' => 'control-label']) !!}
-			{!! Form::select('nationality', ['' => 'Select Nationality', 'SGP' => 'SGP - Singaporean', 'CHN' => 'CHN - Chinese', 'VNM' => 'VNM - Vietnamese', 'IDN' => 'IDN - Indonesian', 'OTH' => 'OTH - Other Nationality'], 'Select Nationality') !!}
+			{!! Form::select('nationality', ['' => 'Select Nationality', 'SG' => 'SGP - Singaporean', 'CN' => 'CHN - Chinese', 'VN' => 'VNM - Vietnamese', 'ID' => 'IDN - Indonesian', 'OTH' => 'OTH - Other Nationality'], 'Select Nationality') !!}
        		</div>
        		<div class="form-group">
           		{!! app('captcha')->display(); !!}

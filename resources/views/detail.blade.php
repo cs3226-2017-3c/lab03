@@ -104,14 +104,14 @@
       </table>
       <p>Achievement details:</p>
       <ol>
-        @if($student->ac[0]!='x') <li>Let it begins</li>@endif 
-        @if($student->ac[1]!='x') <li>Quick starter</li>@endif 
-        @if($student->ac[2]!='x') <li>Active in class {{$student->ac[2]}}/3</li>@endif
-        @if($student->ac[3]!='x') <li>Surprise us {{$student->ac[3]}}/3</li>@endif 
-        @if($student->ac[4]!='x') <li>High determination</li>@endif 
-        @if($student->ac[5]!='x') <li>Bookworm</li>@endif 
-        @if($student->ac[6]!='x') <li>Kattis apprentice {{$student->ac[6]}}/6</li>@endif 
-        @if($student->ac[7]!='x') <li>CodeForces Specialist</li>@endif 
+        @if($student->ac_i[0]!='x') <li>Let it begins</li>@endif 
+        @if($student->ac_i[1]!='x') <li>Quick starter</li>@endif 
+        @if($student->ac_i[2]!='x') <li>Active in class {{$student->ac_i[2]}}/3</li>@endif
+        @if($student->ac_i[3]!='x') <li>Surprise us {{$student->ac_i[3]}}/3</li>@endif 
+        @if($student->ac_i[4]!='x') <li>High determination</li>@endif 
+        @if($student->ac_i[5]!='x') <li>Bookworm</li>@endif 
+        @if($student->ac_i[6]!='x') <li>Kattis apprentice {{$student->ac_i[6]}}/6</li>@endif 
+        @if($student->ac_i[7]!='x') <li>CodeForces Specialist</li>@endif 
       </ol>
       <p>Specific (public) comments about this student: <strong>{{$student->comment}}</strong></p>
     </div>

@@ -49,6 +49,10 @@
 			{!! Form::text('sum', null, ['class' => 'form-control']) !!}
 		</div>
 		<div class="form-group">
+			{!! Form::label('nationality', 'Nationality:', ['class' => 'control-label']) !!}
+			{!! Form::select('nationality', ['' => 'Select Nationality', 'SG' => 'SGP - Singaporean', 'CN' => 'CHN - Chinese', 'VN' => 'VNM - Vietnamese', 'ID' => 'IDN - Indonesian', 'OTH' => 'OTH - Other Nationality'], $student->country) !!}
+       		</div>
+		<div class="form-group">
 			{!! Form::label('comment', 'Specific comments:', ['class' => 'control-label']) !!}
 			{!! Form::text('comment', $student->comment, ['class' => 'form-control']) !!}
 		</div>

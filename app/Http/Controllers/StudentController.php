@@ -48,7 +48,7 @@ class StudentController extends Controller
 
         $leader = $students->first();
         $student = $students->filter(function ($value, $key) use ($id) {
-            return $value->id == $id;
+            return $value->id = $id;
         })->first();
         if (! $student){
             return view('404');

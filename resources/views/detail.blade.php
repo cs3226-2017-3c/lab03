@@ -6,7 +6,8 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-8 col-xs-12" >
-      <h3><strong>{{ $student->name }}</strong> <a href="#"><img src="../img/kattis.png" alt="Kattis" width="20" height="15"></a> in CS3233 S1 AY 2020/21</h3>
+      <h3><strong>{{ $student->name }}</strong> in CS3233 S1 AY 2020/21</h3>
+      <p>Kattis account: <a href="#">{{$student->kattis}}</a> <img src="../img/kattis.png" alt="Kattis" width="20" height="15"></p>
       <p><strong>SPE</strong>(ed) component: <strong>{{ $student->mc }} + {{ $student->tc }} = {{ $student->mc+$student->tc }}</strong><br>
         <strong>DIL</strong>(igence) component: <strong>{{ $student->hw }} + {{ $student->bs }} + {{ $student->ks }} + {{ $student->ac }} = {{ $student->hw+$student->bs+$student->ks+$student->ac }}</strong><br>
         <strong>Sum = SPE + DIL = {{ $student->mc+$student->tc }} + {{ $student->hw+$student->bs+$student->ks+$student->ac }} = {{ $student->mc+$student->tc+$student->hw+$student->bs+$student->ks+$student->ac }}</strong></p>
@@ -101,6 +102,17 @@
           </tr>
         </tbody>
       </table>
+      <p>Achievement details:</p>
+      <ol>
+        @if($student->ac[0]!='x') <li>Let it begins</li>@endif 
+        @if($student->ac[1]!='x') <li>Quick starter</li>@endif 
+        @if($student->ac[2]!='x') <li>Active in class {{$student->ac[2]}}/3</li>@endif
+        @if($student->ac[3]!='x') <li>Surprise us {{$student->ac[3]}}/3</li>@endif 
+        @if($student->ac[4]!='x') <li>High determination</li>@endif 
+        @if($student->ac[5]!='x') <li>Bookworm</li>@endif 
+        @if($student->ac[6]!='x') <li>Kattis apprentice {{$student->ac[6]}}/6</li>@endif 
+        @if($student->ac[7]!='x') <li>CodeForces Specialist</li>@endif 
+      </ol>
       <p>Specific (public) comments about this student: <strong>{{$student->comment}}</strong></p>
     </div>
     <div class="col-md-4 hidden-xs hidden-sm">

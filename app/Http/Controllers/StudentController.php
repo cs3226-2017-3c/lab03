@@ -17,8 +17,8 @@ class StudentController extends Controller
         $students = DB::table('student')->get()->map(function ($value, $key) {
             $arr = array('mc','tc','hw','bs','ks','ac');
             foreach ($arr as $column) {
-                $value->{$column+'_i'} = $object->{$column};
-                $value->{$column} = sum_score($value->$arr);
+                $value->{$column.'_i'} = $value->{$column};
+                $value->{$column} = $this->sum_score($value->{$column.'_i'});
             }
             return $value;
         });

@@ -34,6 +34,7 @@ class StudentsTableSeeder extends Seeder
 
     private function generate_mc()
     {
+        $faker = Faker\Factory::create();
         $min = 0;
         $max = 4;
         $n = 9;
@@ -46,6 +47,7 @@ class StudentsTableSeeder extends Seeder
 
     private function generate_tc()
     {
+        $faker = Faker\Factory::create();
         $x_min = 0;
         $x_max = 10.5;
         $y_min = 0;
@@ -57,6 +59,7 @@ class StudentsTableSeeder extends Seeder
     }
     private function generate_hw()
     {
+        $faker = Faker\Factory::create();
         $min = 0;
         $max = 1.5;
         $n = 10;
@@ -68,6 +71,7 @@ class StudentsTableSeeder extends Seeder
     }
     private function generate_bs()
     {
+        $faker = Faker\Factory::create();
         $min = 0;
         $max = 1;
         $n = 9;
@@ -79,6 +83,7 @@ class StudentsTableSeeder extends Seeder
     }
     private function generate_ks()
     {
+        $faker = Faker\Factory::create();
         $min = 0;
         $max = 1;
         $n = 12;
@@ -90,6 +95,7 @@ class StudentsTableSeeder extends Seeder
     }
     private function generate_ac()
     {
+        $faker = Faker\Factory::create();
         $x_min = 0;
         $x_max = 1;
         $y_min = 0;

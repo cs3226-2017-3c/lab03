@@ -20,13 +20,14 @@ class StudentController extends Controller
                 $value->{$column.'_i'} = $value->{$column};
                 $value->{$column} = $this->sum_score($value->{$column.'_i'});
             }
+            $value->spe = $value->mc+$value->tc;
+            $value->dil = $value->hw+$value->bs+$value->ks+$value->ac;
+            $value->sum->dil = $value->spe + $value->dil
             return $value;
+        })->sortByDesc(function ($a, $key) {
+            return $a->sum;
         });
-        /**
-        ->sortByDesc(function ($a, $key) {
-            return  $a->mc+$a->tc+$a->hw+$a->bs+$a->ks+$a->ac ;
-        });
-        */
+
         return view('index', ['student' => $students]); 
     } 
 

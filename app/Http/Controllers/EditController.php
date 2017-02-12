@@ -41,6 +41,7 @@ class EditController extends Controller
 		$ks = $request->input('ks');
 		$ac = $request->input('ac');
 		$comment = $request->input('comment');
+		$nationality = $request->input('nationality');
 		DB::table('student')->insert(
 			['name' => $fullname, 'nickname' => $nickname, 'kattis' => $kattisacct,
 			'mc' => $mc, 'tc' => $tc, 'hw' => $hw, 'bs' => $bs, 'country' => $nationality,

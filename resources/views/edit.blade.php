@@ -77,3 +77,6 @@
     </div>
   </div>
   @endsection
+@section('footer')
+  <script type="text/javascript" src="/js/sum.js"></script>
+@endsection

@@ -42,7 +42,7 @@ class EditController extends Controller
 		$comment = $request->input('comment');
 		DB::table('student')->insert(
 			['name' => $fullname, 'nickname' => $nickname, 'kattis' => $kattisacct,
-			'mc' => $mc, 'tc' => $tc, 'hw' => $hw, 'bs' => $bs,
+			'mc' => $mc, 'tc' => $tc, 'hw' => $hw, 'bs' => $bs, 'country' => $student->country,
 			'ks' => $ks, 'ac' => $ac, 'comment' => $comment]);
 		
 		return redirect()->action('StudentController@index');

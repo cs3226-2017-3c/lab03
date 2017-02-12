@@ -22,7 +22,7 @@
           {!! Form::hidden('id', $student->id) !!}
         </div>
         <div class="form-group"> 
-          {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-lg']) !!}
+          {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-lg btn-block']) !!}
         </div>
         {!! Form::close() !!}
       </div>

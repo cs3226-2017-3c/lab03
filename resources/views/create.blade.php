@@ -36,7 +36,7 @@ Create Student
           		{!! app('captcha')->display(); !!}
 			</div>
 			<div class="form-group"> {{-- Don't forget to create a submit button --}}
-				{!! Form::submit('Create', ['class' => 'btn btn-primary btn-lg']) !!}
+				{!! Form::submit('Create', ['class' => 'btn btn-primary btn-lg btn-block']) !!}
 			</div>
 
 			{!! Form::close() !!}

@@ -47,7 +47,7 @@ class StudentController extends Controller
         });
 
         $leader = $students->first();
-        $student = $students->get($id);
+        $student = $students->get($id-1);
         if (! $student){
             return view('404');
         } else {

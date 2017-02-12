@@ -15,14 +15,14 @@
   				<li id="home" @if(Request::path()=="/")class="active"@endif}}><a href="/">Home</a></li>
   				<li id="help" @if(Request::is('help'))class="active"@endif}}><a href="/help">Help</a></li>
           @if(Request::is('student/create'))
-          <li id="create-mode" class="active"><a href="#">Create Mode</a></li>
+          <li id="create-mode" class="active">Create Mode</li>
           @elseif(Request::is('student/*/*'))
           <li class="dropdown active">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@if(Request::is('student/*/edit')) Edit Mode @elseif(Request::is('student/*/upload')) Upload Mode @elseif(Request::is('student/*/delete')) Delete Mode  @else @endif <span class="caret"></span></a>
             <ul class="dropdown-menu">
               @if(Request::is('student/*/edit')) @else <li><a href="edit">Edit Mode</a></li>@endif
               @if(Request::is('student/*/upload')) @else <li><a href="upload">Upload Mode</a></li>@endif
-              @if(Request::is('student/*/delete')) @else <li><a href="upload">Delete Mode</a></li>@endif
+              @if(Request::is('student/*/delete')) @else <li><a href="delete">Delete Mode</a></li>@endif
               <li><a href=".">Detail Mode</a></li>
               <li><a href="/student/create">Create Mode</a></li>
             </ul>

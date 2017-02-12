@@ -10,7 +10,7 @@
 		{!! Form::open() !!} {{-- Blade shortcut for creating HTML5 form --}}
 		<div class="form-group"> {{-- Group related form components together --}}
 			{!! Form::label('nickname', 'Nick name:', ['class' => 'control-label']) !!}
-			{!! Form::text('nickname', '{{ $student->nickname }}', ['class' => 'form-control']) !!}
+			{!! Form::text('nickname', $student->nickname , ['class' => 'form-control']) !!}
 		</div>
 		<div class="form-group">
 			{!! Form::label('fullname', 'Full name:', ['class' => 'control-label']) !!}

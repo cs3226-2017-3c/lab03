@@ -16,6 +16,9 @@ class FormController extends Controller {
       'fullname' => 'required|min:5|max:30',
 	  'kattisacct' => 'required|min:5|max:30',
 	  'nationality' => 'required',
+      'g-recaptcha-response' => 'required|captcha',
+    ],[
+      'g-recaptcha-response.required' => 'The ReCaptcha is invalid.'
     ])->validate();
 	
 	$nickname = $request->input('nickname');

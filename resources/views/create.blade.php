@@ -34,8 +34,8 @@ Create Student
 						@endforeach
 					</ul>
 				</div>
-				@endif
-				{!! Form::close() !!}
+			@endif
+			{!! Form::close() !!}
 		</div>
 	</div>
 </div>

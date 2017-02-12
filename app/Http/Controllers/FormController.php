@@ -17,6 +17,17 @@ class FormController extends Controller {
 	  'kattisacct' => 'required|min:5|max:30',
 	  'nationality' => 'required',
     ])->validate();
-
+	
+	$nickname = $request->input('nickname');
+	$fullname = $request->input('fullname');
+	$kattisacct = $request->input('kattisacct');
+	$nationality = $request->input('nationality');
+	DB::table('student')->insert(
+		['name' => $fullname, 'nickname' => $nickname, 'kattis' => $kattisacct,
+		'country' => $nationality, 'mc' => 0, 'tc' => 0, 'hw' => 0, 'bs' => 0,
+		'ks' => 0, 'ac' => 0]);
+		
+	return redirect()->action('StudentController@index');
+	
   }
 }

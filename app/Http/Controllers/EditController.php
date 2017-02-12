@@ -22,6 +22,7 @@ class EditController extends Controller
 			'nickname' => 'required|min:5|max:30',
 			'fullname' => 'required|min:5|max:30',
 			'kattisacct' => 'required|min:5|max:30',
+			'nationality' => 'required',
 			//'mc' => 'required|regex:[0-4][0-4][0-4][0-4][0-4][0-4][0-4][0-4][0-4]',
 			//'tc' => 'required|regex:[0-10.5][0-13.5][0-0.5]',
 			//'hw' => 'required|regex:[0-1.5][0-1.5][0-1.5][0-1.5][0-1.5][0-1.5][0-1.5][0-1.5][0-1.5][0-1.5]',
@@ -42,7 +43,7 @@ class EditController extends Controller
 		$comment = $request->input('comment');
 		DB::table('student')->insert(
 			['name' => $fullname, 'nickname' => $nickname, 'kattis' => $kattisacct,
-			'mc' => $mc, 'tc' => $tc, 'hw' => $hw, 'bs' => $bs, 'country' => $student->country,
+			'mc' => $mc, 'tc' => $tc, 'hw' => $hw, 'bs' => $bs, 'country' => $nationality,
 			'ks' => $ks, 'ac' => $ac, 'comment' => $comment]);
 		
 		return redirect()->action('StudentController@index');

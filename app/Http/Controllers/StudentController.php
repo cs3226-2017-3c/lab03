@@ -16,8 +16,8 @@ class StudentController extends Controller
     public function index() { 
         $students = DB::table('student')->get()->map(function ($value, $key) {
             $arr = array('mc','tc','hw','bs','ks','ac');
-            if(in_array($key,$arr)){
-                return $this->sum_score($value);
+            foreach($arr as $column){
+                return $value->get($column) = sum_score($value->get($column));
             }
         })->sortByDesc(function ($a, $key) {
             return  $a->mc+$a->tc+$a->hw+$a->bs+$a->ks+$a->ac ;

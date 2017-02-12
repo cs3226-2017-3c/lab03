@@ -50,6 +50,6 @@ class EditController extends Controller
 				'mc' => $mc, 'tc' => $tc, 'hw' => $hw, 'bs' => $bs, 'country' => $nationality,
 				'ks' => $ks, 'ac' => $ac, 'comment' => $comment]);
 		
-		return redirect()->action('StudentController@index');
+		return redirect()->action('StudentController@detail',['id' => $id]);
     }      
 }

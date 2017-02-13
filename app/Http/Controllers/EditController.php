@@ -24,12 +24,12 @@ class EditController extends Controller
 			'kattisacct' => 'required|min:5|max:30',
 			'nationality' => 'required',
             'g-recaptcha-response' => 'required|captcha',
-            'mc' => array('required','regex:/^((([0-3][.][05])|([0-4]))($|,)){9}/'),
-            'tc' => array('required','regex:/^((([0-9][.][05])|([0-9])|([1][0-3][.][05])|([1][0-3]))($|,)){2}/'),
-            'hw' => array('required','regex:/^((([0-1][.][05])|([0-1]))($|,)){10}/'),
-            'bs' => array('required','regex:/^(([0-1])($|,)){9}/'),
-            'ks' => array('required','regex:/^(([0-1])($|,)){15}/'),
-            'ac' => array('required','regex:/^(([0-6])($|,)){8}/'),
+            'mc' => array('required','regex:/^((([0-3][.][05])|[x]|([0-4]))($|,)){9}/'),
+            'tc' => array('required','regex:/^((([0-9][.][05])|[x]|([0-9])|([1][0-3][.][05])|([1][0-3]))($|,)){2}/'),
+            'hw' => array('required','regex:/^((([0-1][.][05])|[x]|([0-1]))($|,)){10}/'),
+            'bs' => array('required','regex:/^(([0-1]|[x])($|,)){9}/'),
+            'ks' => array('required','regex:/^(([0-1]|[x])($|,)){15}/'),
+            'ac' => array('required','regex:/^(([0-6]|[x])($|,)){8}/'),
         ],[
             'g-recaptcha-response.required' => 'The ReCaptcha is invalid.'
         ]

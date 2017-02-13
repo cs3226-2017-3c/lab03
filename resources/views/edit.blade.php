@@ -309,7 +309,7 @@ $countries = array
 		</div>
 		<div class="form-group">
 			{!! Form::label('nationality', 'Nationality:', ['class' => 'control-label']) !!}
-			{!! Form::select('nationality', $countries, $student->country,  ['class' => 'form-control']) !!}
+			{!! Form::select('nationality', $countries,['placeholder' => $student->country, 'class' => 'form-control']) !!}
        		</div>
 		<div class="form-group">
 			{!! Form::label('comment', 'Specific comments:', ['class' => 'control-label']) !!}

@@ -27,7 +27,7 @@ class EditController extends Controller
         ],[
             'g-recaptcha-response.required' => 'The ReCaptcha is invalid.'
         ]
-			//'mc' => 'required|regex:[0-4][0-4][0-4][0-4][0-4][0-4][0-4][0-4][0-4]',
+			'mc' => 'required|regex:[0-4][0-4][0-4][0-4][0-4][0-4][0-4][0-4][0-4]',
 			//'tc' => 'required|regex:[0-10.5][0-13.5][0-0.5]',
 			//'hw' => 'required|regex:[0-1.5][0-1.5][0-1.5][0-1.5][0-1.5][0-1.5][0-1.5][0-1.5][0-1.5][0-1.5]',
 			//'bs' => 'required|regex:[0-1][0-1][0-1][0-1][0-1][0-1][0-1][0-1][0-1]',

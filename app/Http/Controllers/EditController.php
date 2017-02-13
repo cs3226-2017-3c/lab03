@@ -27,9 +27,9 @@ class EditController extends Controller
             'mc' => array('required','regex:/^((([0-3][.][05])|([0-4]))($|,)){9}/'),
             'tc' => array('required','regex:/^((([0-9][.][05])|([0-9])|([1][0-3][.][05])|([1][0-3]))($|,)){2}/'),
             'hw' => array('required','regex:/^((([0-1][.][05])|([0-1]))($|,)){10}/'),
-            'bs' => array('required','regex:/^((([0-1])($|,)){9}/'),
-            'ks' => array('required','regex:/^((([0-1])($|,)){15}/'),
-            'ac' => array('required','regex:/^((([0-6])($|,)){8}/'),
+            'bs' => array('required','regex:/^(([0-1])($|,)){9}/'),
+            'ks' => array('required','regex:/^(([0-1])($|,)){15}/'),
+            'ac' => array('required','regex:/^(([0-6])($|,)){8}/'),
         ],[
             'g-recaptcha-response.required' => 'The ReCaptcha is invalid.'
         ]

@@ -25,7 +25,7 @@ class EditController extends Controller
 			'nationality' => 'required',
             'g-recaptcha-response' => 'required|captcha',
             'mc' => array('required','regex:/^((([0-3][.][5])|[x]|([0-4]))($|,)){9}/'),
-            'tc' => array('required','regex:/^(([0-9][.][5])|[x]|([0-9])|([1][0][.][5])|([1][0-3])),([0-9][.][05])|[x]|([0-9])|([1][0-3][.][05])|([1][0-3]))$/'),
+            'tc' => array('required','regex:/^(([0-9][.][5])|[x]|([0-9])|([1][0][.][5])|([1][0]))[,](([0-9][.][5])|[x]|([0-9])|([1][0-3][.][05])|([1][0-3])))$/'),
             'hw' => array('required','regex:/^((([0-1][.][5])|[x]|([0-1]))($|,)){10}/'),
             'bs' => array('required','regex:/^(([0-1]|[x])($|,)){9}/'),
             'ks' => array('required','regex:/^(([0-1]|[x])($|,)){12}/'),

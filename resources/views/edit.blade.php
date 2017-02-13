@@ -329,5 +329,9 @@ $countries = array
   </div>
   @endsection
 @section('footer')
-  <script type="text/javascript" src="/js/sum.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/js/standalone/selectize.min.js"></script>
+<script>
+$('#nationality').selectize();
+</script>
+<script type="text/javascript" src="/js/sum.js"></script>
 @endsection

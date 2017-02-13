@@ -23,7 +23,7 @@ class Student extends Migration
             $table->string('tc')->default('x,x');
             $table->string('hw')->default('x,x,x,x,x,x,x,x,x,x');
             $table->string('bs')->default('x,x,x,x,x,x,x,x,x');
-            $table->string('ks')->default('x,x,x,x,x,x,x,x,x,x,x');
+            $table->string('ks')->default('x,x,x,x,x,x,x,x,x,x,x,x');
             $table->string('ac')->default('x,x,x,x,x,x,x,x');  
             $table->string('avatar')->nullable();
             $table->string('comment')->nullable();            

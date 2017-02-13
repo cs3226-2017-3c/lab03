@@ -280,7 +280,7 @@ $countries = array
 			</div>
 			<div class="form-group">
 			{!! Form::label('nationality', 'Nationality:', ['class' => 'control-label']) !!}
-			{!! Form::select('nationality', $countries, 'Select a country...', ['class' => 'form-control']) !!}
+			{!! Form::select('nationality', $countries,  ['class' => 'form-control']) !!}
        		</div>
        		<div class="form-group">
           		{!! app('captcha')->display(); !!}
